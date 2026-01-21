@@ -1,0 +1,15 @@
+{
+	"name": "Battle",
+	"description": "<p>Battle spells repository. The spells gathered here are designed to simulate some interesting effects of original Adventure Map Spells (up to v1.5) and then to be applied to the adventure spells' new mechanics. They are all set to be not available as spells by default, but it can be changed with the activation mod - 'Make them available'.</p>",
+	"author": "SpiritOfRebellion",
+	"licenseName": "Creative Commons Attribution-ShareAlike",
+	"licenseURL": "http://creativecommons.org/licenses/by-sa/4.0/deed",
+	"contact": "https://discord.gg/chBT42V",
+	"version": "2.0",
+	"modType": "Spells",
+	"language": "english",
+	"compatibility": {
+		"min": "1.7.1"
+	},
+	"keepDisabled": false
+}
