@@ -22,13 +22,12 @@
 			"spell.frenzy" : true,
 			"spell.forgetfulness" : true,
 			"spell.hypnotize" : true,
-			"spell.mirth" : true,
 			"spell.sorrow" : true
 		},
 		"levels": {
 			"base": {
-				"cost": 30,
 				"power": 1,
+				"cost": 20,
 				"range": "0",
 				"targetModifier": {
 					"smart": true
@@ -39,30 +38,34 @@
 						"bonus": {
 							"shield" : {
 								"type": "MIND_IMMUNITY",
+								"valueType": "BASE_NUMBER",
 								"duration": "N_TURNS",
 								"turns": 1
 							},
 							"morale" : {
 								"type": "MORALE",
-								"val" : null,
+								"val" : 0,
 								"valueType": "INDEPENDENT_MAX",
 								"duration": "N_TURNS",
-								"turns": 0
+								"turns": 1
 							}
 						}
 					}
 				}
 			},
 			"none": {
-				"description": "{Base Mindshield}\r\n\r\nThe spell grants a group immunity to mind-affecting spells."
+				"description": "{Base Mindshield}\r\n\r\nThe spell grants immunity to mind-affecting spells to a selected group. Additionally dispels negative statuses of mind and sets mimimum morale to 0.\r\n\r\nEffects last for 1 turn."
 			},
 			"basic": {
-				"description": "{Basic Mindshield}\r\n\r\nThe spell grants a group immunity to mind-affecting spells",
-				"cost": 20,
+				"description": "{Basic Mindshield}\r\n\r\nThe spell grants immunity to mind-affecting spells to a selected group. Additionally dispels negative statuses of mind and sets mimimum morale to 0. Effects last for 2 turns.",
+				"cost": 15,
 				"battleEffects": {
 					"effect1": {
 						"bonus": {
 							"shield" : {
+								"turns" : 2
+							},
+							"morale" : {
 								"turns" : 2
 							}
 						}
@@ -70,37 +73,33 @@
 				}
 			},
 			"advanced": {
-				"description": "{Advanced Mindshield}\r\n\r\nThe spell grants a group immunity to mind-affecting spells",
-				// "power": 3,
-				"cost": 15,
+				"description": "{Advanced Mindshield}\r\n\r\nThe spell grants immunity to mind-affecting spells to a selected group. Additionally dispels negative statuses of mind and sets mimimum morale to 0. Effects last for 5 turns.",
+				"cost": 10,
 				"battleEffects": {
 					"effect1": {
 						"bonus": {
 							"shield" : {
-								"turns" : 4
+								"turns" : 5
 							},
 							"morale" : {
-								"val" : 0,
-								"turns" : 4
+								"turns" : 5
 							}
 						}
 					}
 				}
 			},
 			"expert": {
-				"description": "{Expert Mindshield}\r\n\r\nThe spell grants hero's army immunity to mind-affecting spells.",
-				// "power": 3,
+				"description": "{Expert Mindshield}\r\n\r\nThe spell grants immunity to mind-affecting spells to hero's army. Additionally dispels negative statuses of mind and sets mimimum morale to 0. Effects last for 10 turns.",
 				"cost": 10,
 				"range": "X",
 				"battleEffects": {
 					"effect1": {
 						"bonus": {
 							"shield" : {
-								"turns" : 8
+								"turns" : 10
 							},
 							"morale" : {
-								"val" : 0,
-								"turns" : 8
+								"turns" : 10
 							}
 						}
 					}

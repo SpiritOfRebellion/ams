@@ -1,5 +1,5 @@
 {
-	"ams.magic.adventure.arcaneprotection:arcaneProtection": {
+	"ams.original.arcaneprotection:arcaneProtection": {
 		"level": 3,
 		"power": 0,
 		"flags#override": {
@@ -26,8 +26,7 @@
 						"bonus1" : {
 							"type" : "OPENING_BATTLE_SPELL",
 							"subtype" : "spell.spellguard",
-							"val" : 2,
-							"addInfo" : 0,
+							"addInfo" : 1,
 							"duration" : "ONE_WEEK"
 						},
 						"manaDecay": {
@@ -40,14 +39,13 @@
 				}
 			},
 			"none": {
-				"description": "{Arcane Protection}\r\n\r\nA hero casts mass Spellguard (base) spell at the begining of each battle.\r\n\r\nDrains 20 mana per battle cast and lasts for 7 days."
+				"description": "{Base Arcane Protection}\r\n\r\nA hero casts mass Spellguard (base) spell at the begining of each battle.\r\n\r\nDrains 20 mana per battle cast and lasts for 7 days."
 			},
 			"basic": {
-				"description": "{Arcane Protection}\r\n\r\nA hero casts mass Spellguard (basic) spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle cast and lasts for 7 days.",
+				"description": "{Basic Arcane Protection}\r\n\r\nA hero casts mass Spellguard (basic) spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle cast and lasts for 7 days.",
 				"adventureEffect": {
 					"bonuses": {
 						"bonus1": {
-							"val": 3,
 							"addInfo": 1
 						},
 						"manaDecay": {
@@ -57,11 +55,10 @@
 				}
 			},
 			"advanced": {
-				"description": "{Arcane Protection}\r\n\r\nA hero casts mass Spellguard (advanced) spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle cast and lasts for 7 days.",
+				"description": "{Advanced Arcane Protection}\r\n\r\nA hero casts mass Spellguard (advanced) spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle cast and lasts for 7 days.",
 				"adventureEffect": {
 					"bonuses": {
 						"bonus1": {
-							"val": 6,
 							"addInfo": 2
 						},
 						"manaDecay": {
@@ -71,11 +68,10 @@
 				}
 			},
 			"expert": {
-				"description": "{}\r\n\r\nA hero casts mass Spellguard (expert) spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle cast and lasts for 7 days.",
+				"description": "{Expert Arcane Protection}\r\n\r\nA hero casts mass Spellguard (expert) spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle cast and lasts for 7 days.",
 				"adventureEffect": {
 					"bonuses": {
 						"bonus1": {
-							"val": 99,
 							"addInfo": 3
 						},
 						"manaDecay": {

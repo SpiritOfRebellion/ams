@@ -1,6 +1,6 @@
 {
-	"name": "Make Them Available",
-	"description": "The mod makes the battle spells become regular spells, available to find in mage guilds.",
+	"name": "New spells",
+	"description": "<p>New adventure spells to choose from.</p>",
 	"author": "SpiritOfRebellion",
 	"licenseName": "Creative Commons Attribution-ShareAlike",
 	"licenseURL": "http://creativecommons.org/licenses/by-sa/4.0/deed",
@@ -11,12 +11,5 @@
 	"compatibility": {
 		"min": "1.7.1"
 	},
-	"keepDisabled": true,
-	"depends" :
-	[
-		"adventure-spells-pack.magic.battle.spellguard"
-	],
-	"spells" : [
-		"config/makeAvailable"
-	]
+	"keepDisabled": false
 }

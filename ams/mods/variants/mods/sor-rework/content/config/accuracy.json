@@ -1,5 +1,5 @@
 {
-	"ams.magic.adventure.accuracy:accuracy": {
+	"ams.original.accuracy:accuracy": {
 		"level": 3,
 		"targetCondition#override": {},
 		"flags#override": {
@@ -60,7 +60,7 @@
 				"adventureEffect": {
 					"bonuses": {
 						"bonus1": {
-							"val": 6,
+							"val": 5,
 							"addInfo": 2
 						},
 						"manaDecay": {
@@ -74,7 +74,7 @@
 				"adventureEffect": {
 					"bonuses": {
 						"bonus1": {
-							"val": 99,
+							"val": 10,
 							"addInfo": 3
 						},
 						"manaDecay": {

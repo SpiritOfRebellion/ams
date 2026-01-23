@@ -1,0 +1,15 @@
+{
+	"name": "Misc",
+	"description": "<p>Miscellaneous items required for modifications to function.</p>",
+	"author": "SpiritOfRebellion",
+	"licenseName": "Creative Commons Attribution-ShareAlike",
+	"licenseURL": "http://creativecommons.org/licenses/by-sa/4.0/deed",
+	"contact": "https://discord.gg/chBT42V",
+	"version": "2.0",
+	"modType": "Spells",
+	"language": "english",
+	"compatibility": {
+		"min": "1.7.1"
+	},
+	"keepDisabled": false
+}

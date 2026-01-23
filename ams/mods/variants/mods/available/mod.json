@@ -1,0 +1,23 @@
+{
+	"name": "Availability Mod",
+	"description": "The mod makes the battle spells gathered in 'Misc' folder to behave as regular spells - available to find in mage guilds. Normally, they are functioning as 'hidden', even if enabled.",
+	"author": "SpiritOfRebellion",
+	"licenseName": "Creative Commons Attribution-ShareAlike",
+	"licenseURL": "http://creativecommons.org/licenses/by-sa/4.0/deed",
+	"contact": "https://discord.gg/chBT42V",
+	"version": "2.0",
+	"modType": "Spells",
+	"language": "english",
+	"compatibility": {
+		"min": "1.7.1"
+	},
+	"keepDisabled": true,
+	"depends" :
+	[
+		"ams.misc.spellguard",
+		"ams.misc.mindshield"
+	],
+	"spells" : [
+		"config/available"
+	]
+}

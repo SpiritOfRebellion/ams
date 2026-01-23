@@ -12,13 +12,13 @@
 	},
 	"depends" :
 	[
-		"ams.magic.adventure.accuracy",
-		"ams.magic.adventure.arcaneProtection",
-		"ams.magic.battle.spellguard",
-		"ams.magic.adventure.benediction",
-		"ams.magic.adventure.channelPower",
-		"ams.magic.adventure.clarity",
-		"ams.magic.battle.mindshield"
+		"ams.original.accuracy",
+		"ams.original.arcaneProtection",
+		"ams.misc.spellguard",
+		"ams.original.benediction",
+		"ams.original.channelPower",
+		"ams.original.clarity",
+		"ams.misc.mindshield"
 	],
 	"keepDisabled": false,
 	"spells": [

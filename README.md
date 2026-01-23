@@ -81,11 +81,11 @@ As a consequence of the rework, some new spells were designed to simulate Advent
 
 # Known Issues
 
-- Lack of proper indication in the unit window about true effects of a spell. This also applies if a spell has a cumulating effect. Currently only 'base' stats are displayed.
-- There is no way to indicate that adventure spells' duration ended. Partially solved with the durations set to: until next week.
-- A player can cast a spell which drains resources even if there is nothing to drain. Partially solved with variety of costs.
-- The AI doesn't use the spells.
-- Spells casted at the begining of a battle are always mass effect despite their level.
+- Lack of proper indication in the unit window about true effects of a spell. This also applies if a spell has a cumulating effect. Currently only 'base' stats are displayed. As far as I know, the issue is known to developers and not easy to change.
+- There is no way to indicate that adventure spells' duration ended. Partially solved with the durations set to: until next week. So a new week works as a reminder that spells must be renewed.
+- A player can cast a spell which drains resources, even if there is nothing to drain. In most cases, values can't drop below zero. Partially solved with variety of costs.
+- Have in mind that there is no AI support for the spells, which means AI doesn't use them.
+- Spells casted at the begining of a battle has always a mass effect despite their level.
 - Some spells ignores hero's power when it comes to duration. Partially solved by adjusting fixed durations.
 - Casts per day bug: [#6659](https://github.com/vcmi/vcmi/issues/6659) (solved in upcomming 1.7.2 update). 
 
@@ -93,9 +93,9 @@ As a consequence of the rework, some new spells were designed to simulate Advent
 
 ## TODOs
 
-1. Compatibility files for other mods.
+1. Compatibility with other mods, current design have support only for vanilla towns.
 2. Restrictions to the spells - eg. 'Call the Legion' restricted to a Heretics, 'Benediction' prohibited to a Death Knight and so on. Also there should be restrictions to the creatures.
-3. Original sounds for new battle spells and animations.
+3. Original sounds for additional battle spells and animations, currently they reuse existing ones.
 
 # Changelog
 
@@ -114,19 +114,21 @@ As a consequence of the rework, some new spells were designed to simulate Advent
 
 ### Mod structure
 
-- [x] Simplified directory three, any unnecessary directories deleted. Schools indications moved to Readme-s.
-- [ ] Duplication reduced in the code by using "base" object, which was not present.
-- [x] Changed main catalog name from 'adventure-spell-pack' to 'ams' (from Adventure Map Spells) for shorter object chains.
+- [x] Simplified directory three, any unnecessary directories deleted. Schools indications moved to Readme-s. Changed main catalog name from 'adventure-spell-pack' to 'ams' (from Adventure Map Spells) for shorter object chains.
+- [ ] Duplication reduced in the code by using "base" object (which was not present).
+- [x] 
 - [ ] Changed 'Raise Demons' name to 'Call the Legion', due to potential conflicts.
 
 ### Other
 
+- [ ] Changed the directory tree. 
 - [ ] Some sound effects louder, some replaced, plus fixed metas,
 - [ ] Updated mod.json descriptions
 - [ ] Updated documentation on GitHub and in the Launcher.
 - [ ] Erased comments
 - [ ] Additional battle spells have 'special' parameter if necessary
 - [ ] Add credits for resouces used in the mod.
+
 
 ### Translations
 

@@ -1,5 +1,5 @@
 {
-	"ams.magic.adventure.channelpower:channelPower": {
+	"ams.original.channelpower:channelPower": {
 		"power": 1,
 		"flags#override": {
 			"indifferent": true
@@ -58,7 +58,6 @@
 			},
 			"basic": {
 				"description": "{Basic Channel Power}\r\n\r\nA hero gains +5 Power, yet the spell drains -3 from the other primary skills.\r\n\r\nThe effect lasts until next week.",
-				"cost" : 50,
 				"adventureEffect": {
 					"bonuses": {
 						"skillBoost": {
@@ -78,7 +77,6 @@
 			},
 			"advanced": {
 				"description": "{Advanced Channel Power}\r\n\r\nA hero gains +7 Power, yet the spell drains -4 from the other primary skills.\r\n\r\nThe effect lasts until next week.",
-				"cost" : 50,
 				"adventureEffect": {
 					"bonuses": {
 						"skillBoost": {
@@ -98,7 +96,6 @@
 			},
 			"expert": {
 				"description": "{Expert Channel Power}\r\n\r\nA hero gains +10 Power, yet the spell drains -5 from the other primary skills.\r\n\r\nThe effect lasts until next week.",
-				"cost": 50,
 				"adventureEffect": {
 					"bonuses": {
 						"skillBoost": {
