@@ -49,7 +49,7 @@
 
 ---
 
-# SoR Rework
+# SoR Rework Overview
 
 ## Adventure Spells
 
@@ -58,6 +58,7 @@ The mod changes durations, behavior, availability and costs of the spells. The c
 ### **Air**
 - **Accuracy**: casts mass 'Precision' spell at the begenning of a battle. Drains mana per battle -20/-10/-10/-10. Lasts until next week.
 - **Clarity**: casts mass 'Mindshield' spell at the beginning of a battle. Drains mana per battle -20/-20/-10/-10. Lasts until next week.
+- **Darkness**: A thick shroud of darkness envelops the area surrounding the hero (3/3/4/5 radius), obscuring it from the sight of foes.\r\n\r\nThe spell inflicts a -3/-2/-2/-2 penalty to Knowledge, decreases visibility radius by -3/-2/-2/-1, and reduces the hero’s movement by -1000/-700/-500/-300 points. The effects persist until the next week.
 
 ### Global
 - **Arcane Protection**: casts mass 'Spellguard' spell at the beginning of a battle. Drains mana per battle -20/-10/-10/-10. Lasts until next week.
@@ -73,10 +74,12 @@ As a consequence of the rework, some new spells were designed to simulate Advent
 
 - **Mindshield** used in **Clarity**, gives Mind Immunity, dispels Mind spells, and sets min morale to -/-/0/0.
 
-## Other
+## NOTES
 
+- Most the spells now work as opening battle spells, so their effects are visible and can also be negated or dispelled.
 - Considered **Cancelation spell**, but ultimately no-cancelation showed up as an interesting consequence.
-
+- Artifacts have the advantage over the adventure spells that they are mostly not burdened with consequences.
+- Initially considered exactly 7 days duration for the spells, but as long as there is no comfortable option to see are spells currently in use, their duration lasts until new week. This means that entering a new week serves as a signal to renew the spells if necessary. The duration is determined by the timing of when the spells are cast.
 ---
 
 # Known Issues
@@ -87,7 +90,8 @@ As a consequence of the rework, some new spells were designed to simulate Advent
 - Have in mind that there is no AI support for the spells, which means AI doesn't use them.
 - Spells casted at the begining of a battle has always a mass effect despite their level.
 - Some spells ignores hero's power when it comes to duration. Partially solved by adjusting fixed durations.
-- Casts per day bug: [#6659](https://github.com/vcmi/vcmi/issues/6659) (solved in upcomming 1.7.2 update). 
+- Casts per day bug: [#6659](https://github.com/vcmi/vcmi/issues/6659) (solved in upcomming 1.7.2 update).
+- Original 'Dead Luck' effect doesn't work as intended for unknown reasons.
 
 ---
 
@@ -101,39 +105,45 @@ As a consequence of the rework, some new spells were designed to simulate Advent
 
 ## Version 2.0
 
-### Adventure Spells
+### SoR's rework
 
-- [ ] Duration of the spells changed to ONE_WEEK in most cases, but it doesn't mean 7 days everytime, depends when it's casted. Entering a new week should be a signal to renew the spells.
-- [ ] Changed behavior and effects of the spells, with preserving their original characer. Most of them can now be dispelled in a battle.
-- [ ] Variety of spell costs implemented: mana costs, movement costs, primary skills costs, resources costs... Read the description, before casting.
-- [ ] Disguise spell duration also elongated,
-- [ ] The spells are rare to find (max. gain chance = 3; default 0),
+- [ ] Duration of the spells changed to ONE_WEEK, including Disguise. 
+- [ ] Changed behavior and effects of the spells, while staying close to their original bonuses.
+- [ ] Variety of spells' costs implemented: mana costs, movement costs, primary skills costs, resources costs...
+- [ ] The spells are quite rare to find and pinned to specific factions (max. gain chance = 3; default 0),
 - [ ] New battle spells added to simulate some effects. Unavailable as default, but can be enabled.
 - [ ] Things kept optional.
-- [ ] Preserved original mechanic of the spells (for dependencies, different variants and further development).
 
-### Mod structure
+### Original files
 
-- [x] Simplified directory three, any unnecessary directories deleted. Schools indications moved to Readme-s. Changed main catalog name from 'adventure-spell-pack' to 'ams' (from Adventure Map Spells) for shorter object chains.
-- [ ] Duplication reduced in the code by using "base" object (which was not present).
-- [x] 
-- [ ] Changed 'Raise Demons' name to 'Call the Legion', due to potential conflicts.
+- [ ] Changed 'Raise Demons' name to 'Call the Legion', assuming potential conflicts with other mods in the future.
+- [ ] Reduced duplication by making use of "base" object (which was not present).
+- [ ] Erased comments.
+
+### Structure
+
+- [x] Rearranged directory tree, any unnecessary directories deleted. Schools indications moved to Readme-s.
+- [x] Further shortening of object chains from e.g. `spell.adventure-spells-pack.air.accuracy.accuracy.description.none` to `spell.ams.original.accuracy.accuracy.description.none`
+- [x] New division for original spells, new spells, changes, and miscelaneous content. 
+- [ ] Fixed paths.
 
 ### Other
 
-- [ ] Changed the directory tree. 
 - [ ] Some sound effects louder, some replaced, plus fixed metas,
 - [ ] Updated mod.json descriptions
-- [ ] Updated documentation on GitHub and in the Launcher.
+- [ ] Updated Launcher's descriptions and documentation on GitHub
 - [ ] Erased comments
-- [ ] Additional battle spells have 'special' parameter if necessary
-- [ ] Add credits for resouces used in the mod.
+- [ ] Credits for resouces used in the mod.
+
+### Tests
+
+- [] New content.
+- [] Original content.
 
 
 ### Translations
 
-- [ ] Fixed paths.
-- [x] Some minor translations lost due structural changes.
+- [x] Some minor translations lost due to structural changes.
 - [ ] Chineese, complete, autogenerated.
 - [ ] Spanish, complete, autogenerated.
 - [ ] Polish, complete.

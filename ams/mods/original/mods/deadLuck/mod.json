@@ -1,6 +1,6 @@
 {
   "name": "Dead Luck",
-  "description": "Dead Luck",
+  "description": "Dead Luck - not working as intended and disabled by default.",
   "author": "Heroes III Modding Community, Aphra, SpiritOfRebellion",
   "licenseName": "Creative Commons Attribution-ShareAlike",
   "licenseURL": "http://creativecommons.org/licenses/by-sa/4.0/deed",
@@ -11,7 +11,7 @@
   "compatibility": {
     "min": "1.7.0"
   },
-  "keepDisabled": false,
+  "keepDisabled": true,
   "spells": [
     "config/deadLuck"
   ]

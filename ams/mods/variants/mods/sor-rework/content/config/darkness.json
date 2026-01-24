@@ -1,0 +1,115 @@
+{
+	"ams.original.darkness:darkness": {
+		"level": 3,
+		"flags#override": {
+			"indifferent": true
+		},
+		"defaultGainChance": 0,
+		"gainChance": {
+			"dungeon" : 3,
+			"fortress" : 1,
+			"inferno" : 3,
+			"necropolis" : 3,
+			"stronghold" : 1,
+			"tower" : 2,
+		},
+		"levels#override": {
+			"base": {
+				"cost" : 30,
+				"power" : 1,
+				"range" : "0",
+				"adventureEffect" : {
+					"type" : "generic",
+					"castsPerDay": 1,
+					"bonuses" : {
+						"darkness" : {
+							"type" : "DARKNESS",
+							"val" : 3,
+							"duration" : "ONE_WEEK"
+						},
+						"movementPenalty": {
+							"type" : "MOVEMENT",
+							"subtype" : "heroMovementLand",
+							"val" : -1000,
+							"valueType" : "BASE_NUMBER",
+							"duration": "ONE_WEEK"
+						},
+						"sightPenalty":{
+							"type" : "SIGHT_RADIUS",
+							"val" : -3,
+							"valueType": "BASE_NUMBER",
+							"duration": "ONE_WEEK"
+						},
+						"skillCost": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.knowledge",
+							"val": -3,
+							"valueType": "BASE_NUMBER",
+							"duration": "ONE_WEEK"
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Base Darkness}\r\n\r\nA thick shroud of darkness envelops the area surrounding the hero (3 radius), obscuring it from the sight of foes.\r\n\r\nThe spell inflicts a -2 penalty to Knowledge, decreases visibility radius by -3, and reduces the hero’s movement by -1000 points. The effects persist until the next week."
+			},
+			"basic": {
+				"description": "{Basic Darkness}\r\n\r\nA thick shroud of darkness envelops the area surrounding the hero (3 radius), obscuring it from the sight of foes.\r\n\r\nThe spell inflicts a -2 penalty to Knowledge, decreases visibility radius by -2, and reduces the hero’s movement by -700 points. The effects persist until the next week.",
+				"adventureEffect": {
+					"bonuses": {
+						"darkness": {
+							"val": 3
+						},
+						"movementPenalty": {
+							"val": -700
+						},
+						"sightPenalty": {
+							"val": -2
+						},
+						"skillCost": {
+							"val": -2
+						}
+					}
+				}
+			},
+			"advanced": {
+				"description": "{Advanced Darkness}\r\n\r\nA thick shroud of darkness envelops the area surrounding the hero (4 radius), obscuring it from the sight of foes.\r\n\r\nThe spell inflicts a -2 penalty to Knowledge, decreases visibility radius by -2, and reduces the hero’s movement by -500 points. The effects persist until the next week.",
+				"adventureEffect": {
+					"bonuses": {
+						"darkness": {
+							"val": 4
+						},
+						"movementPenalty": {
+							"val": -500
+						},
+						"sightPenalty": {
+							"val": -2
+						},
+						"skillCost": {
+							"val": -2
+						}
+					}
+				}
+			},
+			"expert": {
+				"description": "{Expert Darkness}\r\n\r\nA thick shroud of darkness envelops the area surrounding the hero (5 radius), obscuring it from the sight of foes.\r\n\r\nThe spell inflicts a -2 penalty to Knowledge, decreases visibility radius by -1, and reduces the hero’s movement by -300 points. The effects persist until the next week.",
+				"adventureEffect": {
+					"bonuses": {
+						"darkness": {
+							"val": 5
+						},
+						"movementPenalty": {
+							"val": -300
+						},
+						"sightPenalty": {
+							"val": -1
+						},
+						"skillCost": {
+							"val": -2
+						}
+					}
+				}
+			}
+		}
+	}
+}
