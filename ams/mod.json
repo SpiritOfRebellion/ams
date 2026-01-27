@@ -12,11 +12,13 @@
 	},
 	"changelog" : {
 		"2.0" : [
-			"Spells' duration",
-			"Spells' behavior",
-			"Spells' costs",
-			"Spells' occurence",
-			"File structure",
+			"Changed spells' duration (mostly one week)",
+			"Changed spells' behavior (cast at the begenning of a battle)",
+			"Spells' costs (various types of costs and consequences)",
+			"Spells' occurence (quite rare or pinned to a specific faction)",
+			"Improved core spells (Disguise, Visions)",
+			"New spells"
+			"Modified mod structure",
 			"Cleaner code",
 			"Sound fixes",
 			"Doc updates",

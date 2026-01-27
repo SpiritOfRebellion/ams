@@ -23,7 +23,7 @@
 					"type" : "generic",
 					"castsPerDay": 1,
 					"bonuses" : {
-						"bonus1" : {
+						"openingSepllguard" : {
 							"type" : "OPENING_BATTLE_SPELL",
 							"subtype" : "spell.spellguard",
 							"addInfo" : 1,
@@ -32,7 +32,7 @@
 						"manaDecay": {
 							"type": "COMBAT_MANA_BONUS",
 							"val": -20,
-							"valueType": "BASE_NUMBER",
+							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						}
 					}
@@ -45,7 +45,7 @@
 				"description": "{Basic Arcane Protection}\r\n\r\nA hero casts mass Spellguard (basic) spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle cast and lasts for 7 days.",
 				"adventureEffect": {
 					"bonuses": {
-						"bonus1": {
+						"openingSepllguard": {
 							"addInfo": 1
 						},
 						"manaDecay": {
@@ -58,7 +58,7 @@
 				"description": "{Advanced Arcane Protection}\r\n\r\nA hero casts mass Spellguard (advanced) spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle cast and lasts for 7 days.",
 				"adventureEffect": {
 					"bonuses": {
-						"bonus1": {
+						"openingSepllguard": {
 							"addInfo": 2
 						},
 						"manaDecay": {
@@ -71,7 +71,7 @@
 				"description": "{Expert Arcane Protection}\r\n\r\nA hero casts mass Spellguard (expert) spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle cast and lasts for 7 days.",
 				"adventureEffect": {
 					"bonuses": {
-						"bonus1": {
+						"openingSepllguard": {
 							"addInfo": 3
 						},
 						"manaDecay": {

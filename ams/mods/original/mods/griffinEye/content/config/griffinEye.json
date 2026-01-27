@@ -32,11 +32,9 @@
 		},
 		"targetType" : "NO_TARGET",
 		"levels" : {
-			"none" : {
-				"description" : "{Griffin Eye}\r\n\r\nSee 1 square further into the shroud until the end of the day.",
+			"base" : {
 				"cost" : 8,
 				"power" : 10,
-				//				"aiValue" : 5,
 				"range" : "X",
 				"targetModifier" : {
 					"smart" : false
@@ -45,7 +43,7 @@
 					"type" : "generic",
 					"castsPerDay" : 1,
 					"bonuses" : {
-						"attacks" : {
+						"buffSight" : {
 							"type" : "SIGHT_RADIUS",
 							"val" : 1,
 							"duration" : "ONE_DAY"
@@ -53,23 +51,16 @@
 					}
 				}
 			},
+			"none": {
+				"description" : "{Base Griffin Eye}\r\n\r\nSee 1 square further into the shroud until the end of the day."
+			},
 			"basic" : {
 				"description" : "{Basic Griffin Eye}\r\n\r\nSee 1 square further into the shroud until the end of the day.",
 				"cost" : 6,
-				"power" : 10,
-				//				"aiValue" : 5,
-				"range" : "X",
-				"targetModifier" : {
-					"smart" : false
-				},
 				"adventureEffect" : {
-					"type" : "generic",
-					"castsPerDay" : 1,
 					"bonuses" : {
-						"attacks" : {
-							"type" : "SIGHT_RADIUS",
-							"val" : 1,
-							"duration" : "ONE_DAY"
+						"buffSight" : {
+							"val" : 1
 						}
 					}
 				}
@@ -77,20 +68,14 @@
 			"advanced" : {
 				"description" : "{Advanced Griffin Eye}\r\n\r\nSee 2 squares further into the shroud until the end of the day.",
 				"cost" : 6,
-				"power" : 10,
-				//				"aiValue" : 5,
 				"range" : "X",
 				"targetModifier" : {
 					"smart" : false
 				},
 				"adventureEffect" : {
-					"type" : "generic",
-					"castsPerDay" : 1,
 					"bonuses" : {
-						"attacks" : {
-							"type" : "SIGHT_RADIUS",
-							"val" : 2,
-							"duration" : "ONE_DAY"
+						"buffSight" : {
+							"val" : 2
 						}
 					}
 				}
@@ -98,20 +83,10 @@
 			"expert" : {
 				"description" : "{Expert Griffin Eye}\r\n\r\nSee 3 squares further into the shroud until the end of the day.",
 				"cost" : 6,
-				"power" : 10,
-				//				"aiValue" : 5,
-				"range" : "X",
-				"targetModifier" : {
-					"smart" : false
-				},
 				"adventureEffect" : {
-					"type" : "generic",
-					"castsPerDay" : 1,
 					"bonuses" : {
-						"attacks" : {
-							"type" : "SIGHT_RADIUS",
-							"val" : 3,
-							"duration" : "ONE_DAY"
+						"buffSight" : {
+							"val" : 3
 						}
 					}
 				}

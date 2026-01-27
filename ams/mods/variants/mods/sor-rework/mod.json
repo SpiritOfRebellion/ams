@@ -10,6 +10,7 @@
 	"compatibility" : {
 		"min" : "1.7.1"
 	},
+	"keepDisabled": false,
 	"depends" :
 	[
 		"ams.original.accuracy",
@@ -20,9 +21,9 @@
 		"ams.original.clarity",
 		"ams.misc.mindshield",
 		"ams.original.darkness",
-		"ams.original.deadLuck"
+		"ams.original.deadLuck",
+		"ams.original.deathCall"
 	],
-	"keepDisabled": false,
 	"spells": [
 		"config/accuracy",
 		"config/arcaneProtection",
@@ -30,6 +31,11 @@
 		"config/channelPower",
 		"config/clarity",
 		"config/darkness",
-		"config/luckLeech"
-	]
+		"config/luckLeech",
+		"config/disguise",
+		"config/visions",
+		"config/deathCall"
+	],
+	"settings" : {
+	}
 }

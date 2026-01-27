@@ -1,0 +1,118 @@
+{
+	"ams.original.deathcall:deathCall": {
+		"level": 4,
+		"flags#override": {
+			"indifferent": true
+		},
+		"defaultGainChance": 0,
+		"gainChance": {
+			"necropolis" : 3
+		},
+		"levels#override": {
+			"base": {
+				"cost" : 40,
+				"power" : 1,
+				"range" : "0",
+				"adventureEffect" : {
+					"type" : "generic",
+					"castsPerDay": 1,
+					"bonuses" : {
+						"bonusNecromancy" : {
+							"type": "UNDEAD_RAISE_PERCENTAGE",
+							"val": 5,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK",
+							"propagator": "HERO"
+						},
+						"skillCostPower": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.spellpower",
+							"val": -1,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"skillCostKnowledge": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.knowledge",
+							"val": -1,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"costResourceMercury": {
+							"type": "GENERATE_RESOURCE",
+							"subtype": "resource.mercury",
+							"val": 0,
+							"valueType": "ADDITIVE_VALUE"
+						},
+						"costResourceSulfur": {
+							"type": "GENERATE_RESOURCE",
+							"subtype": "resource.sulfur",
+							"val": 0,
+							"valueType": "ADDITIVE_VALUE"
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Base Death Call}\r\n\r\nGrants +5% bonus to the Necromancy skill.\r\n\r\nThe spell drains -1 Knowledge and -1 Power.\r\n\r\nThe effects last until the next week."
+			},
+			"basic": {
+				"description": "{Basic Death Call}\r\n\r\nGrants +10% bonus to the Necromancy skill.\r\n\r\nThe spell drains -2 Knowledge and -1 Power.\r\n\r\nThe effects last until the next week.",
+				"adventureEffect": {
+					"bonuses": {
+						"bonusNecromancy" : {
+							"val": 10
+						},
+						"skillCostPower": {
+							"val": -1
+						},
+						"skillCostKnowledge": {
+							"val": -2
+						}
+					}
+				}
+			},
+			"advanced": {
+				"description": "{Advanced Death Call}\r\n\r\nGrants +15% bonus to the Necromancy skill.\r\n\r\nThe spell drains -2 Knowledge, -2 Power and -1 Mercury daily.\r\n\r\nThe effects last until the next week.",
+				"adventureEffect": {
+					"bonuses": {
+						"bonusNecromancy" : {
+							"val": 15
+						},
+						"skillCostPower": {
+							"val": -2
+						},
+						"skillCostKnowledge": {
+							"val": -2
+						},
+						"costResourceMercury": {
+							"val": -1
+						}
+					}
+				}
+			},
+			"expert": {
+				"description": "{Expert Death Call}\r\n\r\nGrants +20% bonus to the Necromancy skill.\r\n\r\nThe spell drains -2 Knowledge, -2 Power, -1 Mercury and -1 Sulfur daily.\r\n\r\nThe effects last until the next week.",
+				"adventureEffect": {
+					"bonuses": {
+						"bonusNecromancy" : {
+							"val": 20
+						},
+						"skillCostPower": {
+							"val": -2
+						},
+						"skillCostKnowledge": {
+							"val": -2
+						},
+						"costResourceMercury": {
+							"val": -1
+						},
+						"costResourceSulfur": {
+							"val": -1
+						}
+					}
+				}
+			}
+		}
+	}
+}

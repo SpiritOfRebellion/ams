@@ -41,7 +41,7 @@
 						"manaDecay": {
 							"type": "COMBAT_MANA_BONUS",
 							"val": -20,
-							"valueType": "BASE_NUMBER",
+							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						}
 					}

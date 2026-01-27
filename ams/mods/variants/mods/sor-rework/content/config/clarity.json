@@ -19,7 +19,7 @@
 					"type" : "generic",
 					"castsPerDay": 1,
 					"bonuses" : {
-						"bonus1" : {
+						"immunityMind" : {
 							"type" : "OPENING_BATTLE_SPELL",
 							"subtype" : "mindshield",
 							"addInfo" : 1,
@@ -28,7 +28,7 @@
 						"manaDecay": {
 							"type": "COMBAT_MANA_BONUS",
 							"val": -20,
-							"valueType": "BASE_NUMBER",
+							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						}
 					}
@@ -41,7 +41,7 @@
 				"description": "{Basic Clarity}\r\n\r\nA hero casts mass Mindshield (basic) at the begining of each battle.\r\n\r\nCosts 10 mana per battle and lasts until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"bonus1": {
+						"immunityMind": {
 							"addInfo": 1
 						},
 						"manaDecay": {
@@ -54,7 +54,7 @@
 				"description": "{Advanced Clarity}\r\n\r\nA hero casts mass Mindshield (advanced) spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle and lasts until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"bonus1": {
+						"immunityMind": {
 							"addInfo": 2
 						},
 						"manaDecay": {
@@ -67,7 +67,7 @@
 				"description": "{Expert Clarity}\r\n\r\nA hero casts expert Minshield spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle and lasts until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"bonus1": {
+						"immunityMind": {
 							"addInfo": 3
 						},
 						"manaDecay": {

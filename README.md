@@ -1,4 +1,4 @@
-# Table of Contents
+<!-- # Table of Contents -->
 
 - [Adventure Map Spells Overview](#adventure-map-spells-overview)
 - [SoR Rework](#sor-rework)
@@ -51,28 +51,39 @@
 
 # SoR Rework Overview
 
-## Adventure Spells
-
 The mod changes durations, behavior, availability and costs of the spells. The changes listed below indicate spells that are mostly done.
 
-### **Air**
+## Modifications to the original adventure spells
+
+### Air
 - **Accuracy**: casts mass 'Precision' spell at the begenning of a battle. Drains mana per battle -20/-10/-10/-10. Lasts until next week.
 - **Clarity**: casts mass 'Mindshield' spell at the beginning of a battle. Drains mana per battle -20/-20/-10/-10. Lasts until next week.
 - **Darkness**: A thick shroud of darkness envelops the area surrounding the hero (3/3/4/5 radius), obscuring it from the sight of foes.\r\n\r\nThe spell inflicts a -3/-2/-2/-2 penalty to Knowledge, decreases visibility radius by -3/-2/-2/-1, and reduces the hero’s movement by -1000/-700/-500/-300 points. The effects persist until the next week.
 
+### Earth
+- **Dead Luck**: disabled due to a bugged mechanic.
+- **Luck Leech**: replaces Dead Luck; casts Fortune and Misfortune at the beginning of a battle. Drains mana per battle -20/-10/-10/-10. Lasts until next week.
+- **Death Call**: boosts Necromancy skill +5/10/15/20%; drains knowledge -1/-2/-2/-2, Power -1/-1/-2/-2, Mercury 0/0/-1/-1, Sulfur 0/0/0/-1.
+- **Dwarven Luck**: disabled due to no ideas about this one, and its features already used in Luck Leech spell.
+
+### Water
+- **Benediction**: A Hero can cast all spells at Basic/Basic/Advanced/Expert proficiency at a price of 'Power' -10/-2/-5/-8. Lasts until next week.
+- **Channel Power**: A hero gains a solid boost to 'Power' 5/5/7/10, yet the spell drains from the all other primary skills -5/-3/-4/-5 each. The effect lasts until next week.
+
 ### Global
 - **Arcane Protection**: casts mass 'Spellguard' spell at the beginning of a battle. Drains mana per battle -20/-10/-10/-10. Lasts until next week.
+- **Griffin Eye**: disabled, as the Vision spell now shares the same buff.
 
-### **Water**
-- **Benediction**: A Hero can cast all spells at Basic/Basic/Advanced/Expert proficiency at a price of 'Power' -10/-2/-5/-8. Lasts until next week.
-- **Channel Power**: A hero gains a solid boost to 'Power' 5/5/7/10, yet the spell drains from the all other primary skills -5/-3/-4/-5. The effect lasts until next week.
+## Modifications to the core spells
+- **Visions**: Additionally grants +0/1/2/3 to the sight radius. The effect lasts until next week. Drains -1 Power, -1 Knowledge, and -100 movement.
+- **Disguise**: The effect lasts until next week. Drains -1 Power, -1 Knowledge, and -100 movement.
 
-## Battle spells
+## New battle spells
 As a consequence of the rework, some new spells were designed to simulate Adventure Spells effects as battle spells. As default, they are set to be not available in mages' guild, but it can be changed with the 'Make it available' mod in the same directory. 
 
-- **Spellguard**: used in **Arcane Protection**, adds 5/10/15/20 spell immunity, known from Golems, and 0/0/5/5 magic mirror. The effect is cumulative.
+- **Spellguard**: used in **Arcane Protection**, adds 5/10/15/20 spell damage immunity, known from Golems, and 1/2/3/4 magic mirror. The effect is cumulative.
 
-- **Mindshield** used in **Clarity**, gives Mind Immunity, dispels Mind spells, and sets min morale to -/-/0/0.
+- **Mindshield** used in **Clarity**, gives Mind Immunity, dispels Mind spells, except Mirth, and sets min morale to -/-/0/0.
 
 ## NOTES
 
@@ -87,17 +98,18 @@ As a consequence of the rework, some new spells were designed to simulate Advent
 - Lack of proper indication in the unit window about true effects of a spell. This also applies if a spell has a cumulating effect. Currently only 'base' stats are displayed. As far as I know, the issue is known to developers and not easy to change.
 - There is no way to indicate that adventure spells' duration ended. Partially solved with the durations set to: until next week. So a new week works as a reminder that spells must be renewed.
 - A player can cast a spell which drains resources, even if there is nothing to drain. In most cases, values can't drop below zero. Partially solved with variety of costs.
+- Resources value can drop below zero, but picking any other treasure resets it to 0 again. Kinda strange, but seems harmless.
 - Have in mind that there is no AI support for the spells, which means AI doesn't use them.
 - Spells casted at the begining of a battle has always a mass effect despite their level.
 - Some spells ignores hero's power when it comes to duration. Partially solved by adjusting fixed durations.
 - Casts per day bug: [#6659](https://github.com/vcmi/vcmi/issues/6659) (solved in upcomming 1.7.2 update).
-- Original 'Dead Luck' effect doesn't work as intended for unknown reasons.
+- Original 'Dead Luck' effect doesn't work as intended for unknown reasons. Disabled as default.
 
 ---
 
 ## TODOs
 
-1. Compatibility with other mods, current design have support only for vanilla towns.
+1. Compatibility with other mods, current design have support only for the vanilla factions.
 2. Restrictions to the spells - eg. 'Call the Legion' restricted to a Heretics, 'Benediction' prohibited to a Death Knight and so on. Also there should be restrictions to the creatures.
 3. Original sounds for additional battle spells and animations, currently they reuse existing ones.
 
@@ -107,7 +119,7 @@ As a consequence of the rework, some new spells were designed to simulate Advent
 
 ### SoR's rework
 
-- [ ] Duration of the spells changed to ONE_WEEK, including Disguise. 
+- [ ] Duration of the spells changed to ONE_WEEK, including Disguise and Visions 
 - [ ] Changed behavior and effects of the spells, while staying close to their original bonuses.
 - [ ] Variety of spells' costs implemented: mana costs, movement costs, primary skills costs, resources costs...
 - [ ] The spells are quite rare to find and pinned to specific factions (max. gain chance = 3; default 0),

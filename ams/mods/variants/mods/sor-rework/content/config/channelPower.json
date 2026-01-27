@@ -22,32 +22,32 @@
 					"type" : "generic",
 					"castsPerDay": 1,
 					"bonuses" : {
-						"skillBoost": {
+						"skillBoostPower": {
 							"type": "PRIMARY_SKILL",
 							"subtype" : "primarySkill.spellpower",
 							"val": 5,
-							"valueType": "BASE_NUMBER",
+							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						},
-						"skillCost1": {
+						"skillCostAttack": {
 							"type": "PRIMARY_SKILL",
 							"subtype" : "primarySkill.attack",
 							"val": -5,
-							"valueType": "BASE_NUMBER",
+							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						},
-						"skillCost2": {
+						"skillCostDefence": {
 							"type": "PRIMARY_SKILL",
 							"subtype" : "primarySkill.defence",
 							"val": -5,
-							"valueType": "BASE_NUMBER",
+							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						},
-						"skillCost3": {
+						"skillCostKnowledge": {
 							"type": "PRIMARY_SKILL",
 							"subtype" : "primarySkill.knowledge",
 							"val": -5,
-							"valueType": "BASE_NUMBER",
+							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						}
 					}
@@ -60,16 +60,16 @@
 				"description": "{Basic Channel Power}\r\n\r\nA hero gains +5 Power, yet the spell drains -3 from the other primary skills.\r\n\r\nThe effect lasts until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"skillBoost": {
+						"skillBoostPower": {
 							"val": 5
 						},
-						"skillCost1": {
+						"skillCostAttack": {
 							"val": -3
 						},
-						"skillCost2": {
+						"skillCostDefence": {
 							"val": -3
 						},
-						"skillCost3": {
+						"skillCostKnowledge": {
 							"val": -3
 						}
 					}
@@ -79,16 +79,16 @@
 				"description": "{Advanced Channel Power}\r\n\r\nA hero gains +7 Power, yet the spell drains -4 from the other primary skills.\r\n\r\nThe effect lasts until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"skillBoost": {
+						"skillBoostPower": {
 							"val": 7
 						},
-						"skillCost1": {
+						"skillCostAttack": {
 							"val": -4
 						},
-						"skillCost2": {
+						"skillCostDefence": {
 							"val": -4
 						},
-						"skillCost3": {
+						"skillCostKnowledge": {
 							"val": -4
 						}
 					}
@@ -98,16 +98,16 @@
 				"description": "{Expert Channel Power}\r\n\r\nA hero gains +10 Power, yet the spell drains -5 from the other primary skills.\r\n\r\nThe effect lasts until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"skillBoost": {
+						"skillBoostPower": {
 							"val": 10
 						},
-						"skillCost1": {
+						"skillCostAttack": {
 							"val": -5
 						},
-						"skillCost2": {
+						"skillCostDefence": {
 							"val": -5
 						},
-						"skillCost3": {
+						"skillCostKnowledge": {
 							"val": -5
 						}
 					}

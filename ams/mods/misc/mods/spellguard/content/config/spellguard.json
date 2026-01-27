@@ -38,7 +38,7 @@
 							},
 							"reflect" : {
 								"type": "MAGIC_MIRROR",
-								"val": 0,
+								"val": 1,
 								"duration": "N_TURNS",
 								"turns": 1
 							}
@@ -47,10 +47,10 @@
 				}
 			},
 			"none": {
-				"description": "{Base Spellguard}\r\n\r\nIncreases spell damage reduction by 5%.\r\n\r\nThe effect is cumulative and lasts for 1 turn."
+				"description": "{Base Spellguard}\r\n\r\nIncreases spell damage reduction by 5% and grants 1% chance to reflect an opponent's spell.\r\n\r\nThe effect is cumulative and lasts for 1 turn."
 			},
 			"basic": {
-				"description": "{Basic Spellguard}\r\n\r\nIncreases spell damage reduction by 10%.\r\n\r\nThe effect is cumulative and lasts for 2 turns.",
+				"description": "{Basic Spellguard}\r\n\r\nIncreases spell damage reduction by 10% and grants 2% chance to reflect an opponent's spell.\r\n\r\nThe effect is cumulative and lasts for 2 turns.",
 				"cost": 15,
 				"battleEffects": {
 					"effect1": {
@@ -60,6 +60,7 @@
 								"turns": 2
 							},
 							"reflect" : {
+								"val": 2,
 								"turns": 2
 							}
 						}
@@ -67,7 +68,7 @@
 				}
 			},
 			"advanced": {
-				"description": "{Advanced Spellguard}\r\n\r\nIncreases spell damage reduction by 15% and grants 5% chance to reflect an opponent's spell.\r\n\r\nThe effects are cumulative and lasts for 5 turns.",
+				"description": "{Advanced Spellguard}\r\n\r\nIncreases spell damage reduction by 15% and grants 3% chance to reflect an opponent's spell.\r\n\r\nThe effects are cumulative and lasts for 5 turns.",
 				"cost": 10,
 				"battleEffects": {
 					"effect1": {
@@ -77,7 +78,7 @@
 								"turns": 5
 							},
 							"reflect" : {
-								"val": 5,
+								"val": 3,
 								"turns": 5
 							}
 						}
@@ -85,7 +86,7 @@
 				}
 			},
 			"expert": {
-				"description": "{Expert Spellguard}\r\n\r\nIncreases spell damage reduction by 20% and has a 5% chance to reflect an opponent's spell.\r\n\r\nThe effects are cumulative.",
+				"description": "{Expert Spellguard}\r\n\r\nIncreases spell damage reduction by 20% and grants 4% chance to reflect an opponent's spell.\r\n\r\nThe effects are cumulative.",
 				"cost": 10,
 				"range": "X",
 				"battleEffects": {
@@ -96,7 +97,7 @@
 								"turns": 10
 							},
 							"reflect" : {
-								"val": 5,
+								"val": 4,
 								"turns": 10
 							}
 						}

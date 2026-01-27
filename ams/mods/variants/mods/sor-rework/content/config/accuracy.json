@@ -22,7 +22,7 @@
 					"type": "generic",
 					"castsPerDay": 1,
 					"bonuses": {
-						"bonus1": {
+						"openingPrecision": {
 							"type": "OPENING_BATTLE_SPELL",
 							"subtype": "precision",
 							"val": 2,
@@ -32,7 +32,7 @@
 						"manaDecay": {
 							"type": "COMBAT_MANA_BONUS",
 							"val": -20,
-							"valueType": "BASE_NUMBER",
+							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						}
 					}
@@ -45,7 +45,7 @@
 				"description": "{Accuracy}\r\n\r\nA hero casts mass Precision spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle and lasts for 7 days.",
 				"adventureEffect": {
 					"bonuses": {
-						"bonus1": {
+						"openingPrecision": {
 							"val": 3,
 							"addInfo": 1
 						},
@@ -59,7 +59,7 @@
 				"description": "{Accuracy}\r\n\r\nA hero casts advanced Precision spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle and lasts for 7 days.",
 				"adventureEffect": {
 					"bonuses": {
-						"bonus1": {
+						"openingPrecision": {
 							"val": 5,
 							"addInfo": 2
 						},
@@ -73,7 +73,7 @@
 				"description": "{Accuracy}\r\n\r\nA hero casts expert Precision spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle and lasts for 7 days.",
 				"adventureEffect": {
 					"bonuses": {
-						"bonus1": {
+						"openingPrecision": {
 							"val": 10,
 							"addInfo": 3
 						},

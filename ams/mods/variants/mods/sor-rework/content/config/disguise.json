@@ -1,0 +1,55 @@
+{
+	"core:disguise" : {
+		"levels" : {
+			"base":{
+				"cost": 20,
+				"range" : "0",
+				"adventureEffect" : {
+					"type" : "generic",
+					"castsPerDay" : 1,
+					"bonuses" : {
+						"stealth" : {
+							"duration" : "ONE_WEEK"
+						},
+						"movementPenalty": {
+							"type" : "MOVEMENT",
+							"subtype" : "heroMovementLand",
+							"val" : -100,
+							"valueType" : "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"skillCostKnowledge": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.knowledge",
+							"val": -1,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"skillCostPower": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.spellpower",
+							"val": -1,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						}
+					}
+				}
+			},
+			"none": {
+				"description" : "{Disguise}\n\nProficiency: None.\n\nGives false information to an enemy attempting to view your hero.\n\nDrains -1 Knowledge, -1 Power and -100 max movement points daily.\n\nThe effects last until next week."
+			},
+			"basic": {
+				"description" : "{Disguise}\n\nProficiency: Basic.\n\nMakes all units in your army look like your most powerful unit to enemies trying to view your hero. Numbers in each group are unchanged.\n\nDrains -1 Knowledge, -1 Power and -100 max movement points daily.\n\nThe effects last until next week.",
+				"cost": 15
+			},
+			"advanced" : {
+				"description" : "{Disguise}\n\nProficiency: Advanced.\n\nMakes all units in your army look like your most powerful unit to enemies trying to view your hero.  Numbers in each group appear as zero.\n\nDrains -1 Knowledge, -1 Power and -100 max movement points daily.\n\nThe effects last until next week.",
+				"cost": 10
+			},
+			"expert" : {
+				"description" : "{Disguise}\n\nProficiency: Expert.\n\nMakes all units in your army look like the most powerful unit affiliated to your hero type to enemies trying to view your hero. Numbers in each group appear as zero.\n\n\n\nDrains -1 Knowledge, -1 Power and -100 max movement points daily.\n\nThe effects last until next week.",
+				"cost": 10
+			}
+		}
+	}
+}
