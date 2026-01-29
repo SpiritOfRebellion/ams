@@ -49,15 +49,22 @@
 							"val": -5,
 							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
+						},
+						"movementPenalty": {
+							"type" : "MOVEMENT",
+							"subtype" : "heroMovementLand",
+							"val" : -100,
+							"valueType" : "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
 						}
 					}
 				}
 			},
 			"none": {
-				"description": "{Base Channel Power}\r\n\r\nA hero gains +5 Power, yet the spell drains -5 from the other primary skills.\r\n\r\nThe effect lasts until next week.",
+				"description": "{Channel Power}\n\nProficiency: None.\n\nA hero gains +5 Power, yet the spell drains -5 from the other primary skills. Also decreases the max movement points by -100.\n\nThe effects last until next week."
 			},
 			"basic": {
-				"description": "{Basic Channel Power}\r\n\r\nA hero gains +5 Power, yet the spell drains -3 from the other primary skills.\r\n\r\nThe effect lasts until next week.",
+				"description": "{Channel Power}\n\nProficiency: Basic.\n\nA hero gains +5 Power, yet the spell drains -3 from the other primary skills. Also decreases the max movement points by -100.\n\nThe effects last until next week.",
 				"adventureEffect": {
 					"bonuses": {
 						"skillBoostPower": {
@@ -76,7 +83,7 @@
 				}
 			},
 			"advanced": {
-				"description": "{Advanced Channel Power}\r\n\r\nA hero gains +7 Power, yet the spell drains -4 from the other primary skills.\r\n\r\nThe effect lasts until next week.",
+				"description": "{Channel Power}\n\nProficiency: Advanced.\n\nA hero gains +7 Power, yet the spell drains -4 from the other primary skills. Also decreases the max movement points by -100.\n\nThe effects last until next week.",
 				"adventureEffect": {
 					"bonuses": {
 						"skillBoostPower": {
@@ -95,7 +102,7 @@
 				}
 			},
 			"expert": {
-				"description": "{Expert Channel Power}\r\n\r\nA hero gains +10 Power, yet the spell drains -5 from the other primary skills.\r\n\r\nThe effect lasts until next week.",
+				"description": "{Channel Power}\n\nProficiency: Expert.\n\nA hero gains +10 Power, yet the spell drains -5 from the other primary skills. Also decreases the max movement points by -100.\n\nThe effects last until next week.",
 				"adventureEffect": {
 					"bonuses": {
 						"skillBoostPower": {

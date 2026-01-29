@@ -1,0 +1,105 @@
+{
+	"ams.original.heraldofdeath:heraldOfDeath": {
+		"level": 3,
+		"flags#override": {
+			"indifferent": true
+		},
+		"defaultGainChance": 0,
+		"gainChance": {
+			"necropolis" : 3
+		},
+		"levels#override": {
+			"base": {
+				"cost" : 30,
+				"power" : 1,
+				"range" : "0",
+				"adventureEffect" : {
+					"type" : "generic",
+					"castsPerDay": 1,
+					"bonuses" : {
+						"castRipple" : {
+							"type" : "OPENING_BATTLE_SPELL",
+							"subtype" : "spell.deathRipple",
+							"addInfo" : 0,
+							"duration" : "ONE_WEEK"
+						},
+						"manaDecay": {
+							"type": "COMBAT_MANA_BONUS",
+							"val": -20,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"skillCostKnowledge": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.knowledge",
+							"val": -1,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"movementPenalty": {
+							"type" : "MOVEMENT",
+							"subtype" : "heroMovementLand",
+							"val" : -100,
+							"valueType" : "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"costResourceMercury": {
+							"type": "GENERATE_RESOURCE",
+							"subtype": "resource.mercury",
+							"val": -1,
+							"valueType": "ADDITIVE_VALUE"
+						}
+					}
+				}
+			},
+			"none": {
+				"description": "{Herald Of Death}\n\nProficiency: None.\n\nA hero casts Death Ripple spell at the begining of each battle.\n\nIt drains 20 mana per battle, -1 Knowledge, -100 maximum movement points and -1 Mercury. The effects last until next week."
+			},
+			"basic": {
+				"description": "{Herald Of Death}\n\nProficiency: Basic.\n\nA hero casts Death Ripple spell at the begining of each battle.\n\nIt drains 10 mana per battle, -1 Knowledge, -100 maximum movement points and -1 Mercury daily. The effects last until next week.",
+				"adventureEffect": {
+					"bonuses": {
+						"castRipple" : {
+							"addInfo" : 1
+						},
+						"manaDecay": {
+							"val": -10
+						}
+					}
+				}
+			},
+			"advanced": {
+				"description": "{Herald Of Death}\n\nProficiency: Advanced.\n\nA hero casts Death Ripple spell at the begining of each battle.\n\nIt drains 10 mana per battle, -2 Knowledge, -100 maximum movement points and -1 Mercury daily. The effects last until next week.",
+				"adventureEffect": {
+					"bonuses": {
+						"castRipple" : {
+							"addInfo" : 2
+						},
+						"manaDecay": {
+							"val": -10
+						},
+						"skillCostKnowledge": {
+							"val": -2
+						}
+					}
+				}
+			},
+			"expert": {
+				"description": "{Herald Of Death}\n\nProficiency: Expert.\n\nA hero casts Death Ripple spell at the begining of each battle.\n\nIt drains 10 mana per battle, -3 Knowledge, -100 maximum movement points and -1 Mercury daily. The effects last until next week.",
+				"adventureEffect": {
+					"bonuses": {
+						"castRipple" : {
+							"addInfo" : 3
+						},
+						"manaDecay": {
+							"val": -10
+						},
+						"skillCostKnowledge": {
+							"val": -3
+						}
+					}
+				}
+			}
+		}
+	}
+}

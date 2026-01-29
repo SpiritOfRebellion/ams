@@ -1,0 +1,123 @@
+{
+	"ams.original.demonicpower:demonicPower": {
+		"level": 4,
+		"flags#override": {
+			"indifferent": true
+		},
+		"defaultGainChance": 0,
+		"gainChance": {
+			"dungeon" : 2,
+			"fortress" : 1,
+			"inferno" : 3,
+			"stronghold" : 1,
+		},
+		"levels#override": {
+			"base": {
+				"cost" : 50,
+				"power" : 1,
+				"range" : "0",
+				"adventureEffect" : {
+					"type" : "generic",
+					"castsPerDay": 1,
+					"bonuses" : {
+						"skillBoostAttack": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.attack",
+							"val": 5,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"skillCostDefence": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.defence",
+							"val": -5,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"skillCostPower": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.spellpower",
+							"val": -5,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"skillCostKnowledge": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.knowledge",
+							"val": -5,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"movementPenalty": {
+							"type" : "MOVEMENT",
+							"subtype" : "heroMovementLand",
+							"val" : -100,
+							"valueType" : "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+					}
+				}
+			},
+			"none": {
+				"description": "{Demonic Power}\n\nProficiency: None.\n\nA hero gains +5 Attack, yet the spell drains -5 from the other primary skills. Also decreases the max movement points by -100.\n\nThe effects last until next week."
+			},
+			"basic": {
+				"description": "{Demonic Power}\n\nProficiency: Basic.\n\nA hero gains +5 Attack, yet the spell drains -3 from the other primary skills. Also decreases the max movement points by -100.\n\nThe effects last until next week.",
+				"adventureEffect": {
+					"bonuses": {
+						"skillBoostAttack": {
+							"val": 5
+						},
+						"skillCostDefence": {
+							"val": -3
+						},
+						"skillCostPower": {
+							"val": -3
+						},
+						"skillCostKnowledge": {
+							"val": -3
+						},
+					}
+				}
+			},
+			"advanced": {
+				"description": "{Demonic Power}\n\nProficiency: Advanced.\n\nA hero gains +7 Attack, yet the spell drains -4 from the other primary skills. Also decreases the max movement points by -100.\n\nThe effects last until next week.",
+				"adventureEffect": {
+					"bonuses": {
+						"skillBoostAttack": {
+							"val": 7
+						},
+						"skillCostDefence": {
+							"val": -4
+						},
+						"skillCostPower": {
+							"val": -4
+						},
+						"skillCostKnowledge": {
+							"val": -4
+						},
+					}
+				}
+			},
+			"expert": {
+				"description": "{Demonic Power}\n\nProficiency: Expert.\n\nA hero gains +10 Attack, yet the spell drains -5 from the other primary skills. Also decreases the max movement points by -100.\n\nThe effects last until next week.",
+				"adventureEffect": {
+					"bonuses": {
+						"skillBoostAttack": {
+							"val": 10
+						},
+						"skillCostDefence": {
+							"val": -5
+						},
+						"skillCostPower": {
+							"val": -5
+						},
+						"skillCostKnowledge": {
+							"val": -5
+						},
+					}
+				}
+			}
+		}
+	}
+}

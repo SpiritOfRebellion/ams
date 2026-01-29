@@ -32,11 +32,9 @@
 		},
 		"targetType" : "NO_TARGET",
 		"levels" : {
-			"none" : {
-				"description" : "{Empathy}\r\n\r\nNullifies the Morale penalty of mixing good and neutral units until the end of the day.",
+			"base" : {
 				"cost" : 8,
 				"power" : 10,
-				//				"aiValue" : 5,
 				"range" : "X",
 				"targetModifier" : {
 					"smart" : false
@@ -45,68 +43,37 @@
 					"type" : "generic",
 					"castsPerDay" : 1,
 					"bonuses" : {
-						"attacks" : {
+						"unitMix" : {
 							"type" : "NONEVIL_ALIGNMENT_MIX",
 							"duration" : "ONE_DAY"
 						}
 					}
 				}
+			},
+			"none" : {
+				"description" : "{Empathy}\n\nProficiency: None.\n\nNullifies the Morale penalty of mixing good and neutral units until the end of the day."
 			},
 			"basic" : {
-				"description" : "{Basic Empathy}\r\n\r\nNullifies the Morale penalty of mixing good and neutral units until the end of the day.",
-				"cost" : 6,
-				"power" : 10,
-				//				"aiValue" : 5,
-				"range" : "X",
-				"targetModifier" : {
-					"smart" : false
-				},
-				"adventureEffect" : {
-					"type" : "generic",
-					"castsPerDay" : 1,
-					"bonuses" : {
-						"attacks" : {
-							"type" : "NONEVIL_ALIGNMENT_MIX",
-							"duration" : "ONE_DAY"
-						}
-					}
-				}
+				"description" : "{Empathy}\n\nProficiency: Basic.\n\nNullifies the Morale penalty of mixing good and neutral units until the end of the day.",
+				"cost" : 6
 			},
 			"advanced" : {
-				"description" : "{Advanced Empathy}\r\n\r\nNullifies the Morale penalty of mixing good and neutral units until the end of the week.",
+				"description" : "{Empathy}\n\nProficiency: Advanced.\n\nNullifies the Morale penalty of mixing good and neutral units until the end of the week.",
 				"cost" : 6,
-				"power" : 10,
-				//				"aiValue" : 5,
-				"range" : "X",
-				"targetModifier" : {
-					"smart" : false
-				},
 				"adventureEffect" : {
-					"type" : "generic",
-					"castsPerDay" : 1,
 					"bonuses" : {
-						"attacks" : {
-							"type" : "NONEVIL_ALIGNMENT_MIX",
+						"unitMix" : {
 							"duration" : "ONE_WEEK"
 						}
 					}
 				}
 			},
 			"expert" : {
-				"description" : "{Expert Empathy}\r\n\r\nNullifies the Morale penalty of mixing good and neutral units until the end of the week.",
+				"description" : "{Empathy}\n\nProficiency: Expert.\n\nNullifies the Morale penalty of mixing good and neutral units until the end of the week.",
 				"cost" : 6,
-				"power" : 10,
-				//				"aiValue" : 5,
-				"range" : "X",
-				"targetModifier" : {
-					"smart" : false
-				},
 				"adventureEffect" : {
-					"type" : "generic",
-					"castsPerDay" : 1,
 					"bonuses" : {
-						"attacks" : {
-							"type" : "NONEVIL_ALIGNMENT_MIX",
+						"unitMix" : {
 							"duration" : "ONE_WEEK"
 						}
 					}

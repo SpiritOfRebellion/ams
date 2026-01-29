@@ -1,7 +1,7 @@
 <!-- # Table of Contents -->
 
 - [Adventure Map Spells Overview](#adventure-map-spells-overview)
-- [SoR Rework](#sor-rework)
+- [High Magic Mod](#sor-rework)
 - [Known Issues](#known-issues)
 - [TODOs](#todos)
 - [Changelog](#changelog)
@@ -49,20 +49,22 @@
 
 ---
 
-# SoR Rework Overview
+# High Magic Mod Overview
 
 The mod changes durations, behavior, availability and costs of the spells. The changes listed below indicate spells that are mostly done.
 
-## Modifications to the original adventure spells
+## Changes to the original adventure spells
 
 ### Air
 - **Accuracy**: casts mass 'Precision' spell at the begenning of a battle. Drains mana per battle -20/-10/-10/-10. Lasts until next week.
 - **Clarity**: casts mass 'Mindshield' spell at the beginning of a battle. Drains mana per battle -20/-20/-10/-10. Lasts until next week.
 - **Darkness**: A thick shroud of darkness envelops the area surrounding the hero (3/3/4/5 radius), obscuring it from the sight of foes.\r\n\r\nThe spell inflicts a -3/-2/-2/-2 penalty to Knowledge, decreases visibility radius by -3/-2/-2/-1, and reduces the hero’s movement by -1000/-700/-500/-300 points. The effects persist until the next week.
+- **Divine Spirit**: Casts Mirth and Sorrow at the beginning of a battle. Drains mana per battle -20/-10/-10/-10. Nullifies the Morale penalty of mixing good and neutral units. Lasts until next week.
+- **Fleet Foot**: Fixed original file. Adds +200/400/700/1000 to max movement points. Drains -2/-3/-4/-5 Attack, -2/-3/-4/-5 Defence, -500/-500/-750/-1000 gold and 1 gem daily. The effects persist until the next week.
 
 ### Earth
 - **Dead Luck**: disabled due to a bugged mechanic.
-- **Luck Leech**: replaces Dead Luck; casts Fortune and Misfortune at the beginning of a battle. Drains mana per battle -20/-10/-10/-10. Lasts until next week.
+- **Luck Leech**: replaces Dead Luck; casts Fortune and Misfortune at the beginning of a battle. Drains mana per battle -20/-10/-10/-10. Lasts until next week. 
 - **Death Call**: boosts Necromancy skill +5/10/15/20%; drains knowledge -1/-2/-2/-2, Power -1/-1/-2/-2, Mercury 0/0/-1/-1, Sulfur 0/0/0/-1.
 - **Dwarven Luck**: disabled due to no ideas about this one, and its features already used in Luck Leech spell.
 
@@ -72,7 +74,8 @@ The mod changes durations, behavior, availability and costs of the spells. The c
 
 ### Global
 - **Arcane Protection**: casts mass 'Spellguard' spell at the beginning of a battle. Drains mana per battle -20/-10/-10/-10. Lasts until next week.
-- **Griffin Eye**: disabled, as the Vision spell now shares the same buff.
+- **Griffin Eye**: disabled, as the Vision spell now has the same buff.
+- **Empathy**: disabled, as the Divine Spirit now has the same buff.
 
 ## Modifications to the core spells
 - **Visions**: Additionally grants +0/1/2/3 to the sight radius. The effect lasts until next week. Drains -1 Power, -1 Knowledge, and -100 movement.
@@ -109,8 +112,8 @@ As a consequence of the rework, some new spells were designed to simulate Advent
 
 ## TODOs
 
-1. Compatibility with other mods, current design have support only for the vanilla factions.
-2. Restrictions to the spells - eg. 'Call the Legion' restricted to a Heretics, 'Benediction' prohibited to a Death Knight and so on. Also there should be restrictions to the creatures.
+1. Compatibility mod, as current design have support only for the vanilla factions.
+2. Restrictions to the spells - eg. 'Call the Legion' prohibited to a Knights, 'Benediction' prohibited to a Death Knight. Also there should be restrictions to the creatures.
 3. Original sounds for additional battle spells and animations, currently they reuse existing ones.
 
 # Changelog
@@ -129,15 +132,17 @@ As a consequence of the rework, some new spells were designed to simulate Advent
 ### Original files
 
 - [ ] Changed 'Raise Demons' name to 'Call the Legion', assuming potential conflicts with other mods in the future.
-- [ ] Reduced duplication by making use of "base" object (which was not present).
+- [ ] Reduced duplication by making use of "base" objects (which was not present).
 - [ ] Erased comments.
+- [ ] Fixed incorrect valueType in basic Fleet Foot.
+- [ ] Dead Luck banned, due to bugged mechanic.
 
 ### Structure
 
 - [x] Rearranged directory tree, any unnecessary directories deleted. Schools indications moved to Readme-s.
 - [x] Further shortening of object chains from e.g. `spell.adventure-spells-pack.air.accuracy.accuracy.description.none` to `spell.ams.original.accuracy.accuracy.description.none`
 - [x] New division for original spells, new spells, changes, and miscelaneous content. 
-- [ ] Fixed paths.
+- [ ] Updated paths to content and translations.
 
 ### Other
 
@@ -145,7 +150,7 @@ As a consequence of the rework, some new spells were designed to simulate Advent
 - [ ] Updated mod.json descriptions
 - [ ] Updated Launcher's descriptions and documentation on GitHub
 - [ ] Erased comments
-- [ ] Credits for resouces used in the mod.
+- [ ] Credits for new arts used in the mod.
 
 ### Tests
 

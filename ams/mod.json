@@ -12,12 +12,12 @@
 	},
 	"changelog" : {
 		"2.0" : [
-			"Changed spells' duration (mostly one week)",
-			"Changed spells' behavior (cast at the begenning of a battle)",
-			"Spells' costs (various types of costs and consequences)",
-			"Spells' occurence (quite rare or pinned to a specific faction)",
-			"Improved core spells (Disguise, Visions)",
-			"New spells"
+			"High Magic Mod: Changed spells' duration (mostly to next week)",
+			"High Magic Mod: Changed spells' behavior (mostly cast at the begenning of a battle)",
+			"High Magic Mod: Spells' costs (various types of costs and consequences)",
+			"High Magic Mod: Spells' occurence (quite rare or pinned to a specific faction)",
+			"High Magic Mod: Improved core spells (Disguise, Visions)",
+			"High Magic Mod: New spells",
 			"Modified mod structure",
 			"Cleaner code",
 			"Sound fixes",
