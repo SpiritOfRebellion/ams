@@ -18,36 +18,36 @@
 							"valueType" : "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						},
-						"skillCostKnowledge": {
-							"type": "PRIMARY_SKILL",
-							"subtype" : "primarySkill.knowledge",
-							"val": -1,
-							"valueType": "ADDITIVE_VALUE",
-							"duration": "ONE_WEEK"
-						},
-						"skillCostPower": {
+						"costSkillPower": {
 							"type": "PRIMARY_SKILL",
 							"subtype" : "primarySkill.spellpower",
-							"val": -1,
-							"valueType": "ADDITIVE_VALUE",
+							"val": -5,
+							"valueType": "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"costSkillKnowledge": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.knowledge",
+							"val": -5,
+							"valueType": "PERCENT_TO_ALL",
 							"duration": "ONE_WEEK"
 						}
 					}
 				}
 			},
 			"none": {
-				"description" : "{Disguise}\n\nProficiency: None.\n\nGives false information to an enemy attempting to view your hero.\n\nDrains -1 Knowledge, -1 Power and -100 max movement points daily.\n\nThe effects last until next week."
+				"description" : "{Disguise}\n\nSchool: Air\nProficiency: None.\n\n{green|Bless}:\nGives false information to an enemy attempting to view your hero.\n\n{red|Curse}:\n-5% Power,\n-5% Knowledge,\n-100 maximum movement points.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week."
 			},
 			"basic": {
-				"description" : "{Disguise}\n\nProficiency: Basic.\n\nMakes all units in your army look like your most powerful unit to enemies trying to view your hero. Numbers in each group are unchanged.\n\nDrains -1 Knowledge, -1 Power and -100 max movement points daily.\n\nThe effects last until next week.",
+				"description" : "{Disguise}\n\nSchool: Air\nProficiency: Basic.\n\n{green|Bless}:\nMakes all units in your army look like your most powerful unit to enemies trying to view your hero. Numbers in each group are unchanged.\n\n{red|Curse}:\n-5% Power,\n-5% Knowledge,\n-100 maximum movement points.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"cost": 15
 			},
 			"advanced" : {
-				"description" : "{Disguise}\n\nProficiency: Advanced.\n\nMakes all units in your army look like your most powerful unit to enemies trying to view your hero.  Numbers in each group appear as zero.\n\nDrains -1 Knowledge, -1 Power and -100 max movement points daily.\n\nThe effects last until next week.",
+				"description" : "{Disguise}\n\nSchool: Air\nProficiency: Advanced.\n\n{green|Bless}:\nMakes all units in your army look like your most powerful unit to enemies trying to view your hero.  Numbers in each group appear as zero.\n\n{red|Curse}:\n-5% Power,\n-5% Knowledge,\n-100 maximum movement points.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"cost": 10
 			},
 			"expert" : {
-				"description" : "{Disguise}\n\nProficiency: Expert.\n\nMakes all units in your army look like the most powerful unit affiliated to your hero type to enemies trying to view your hero. Numbers in each group appear as zero.\n\n\n\nDrains -1 Knowledge, -1 Power and -100 max movement points daily.\n\nThe effects last until next week.",
+				"description" : "{Disguise}\n\nSchool: Air\nProficiency: Expert.\n\n{green|Bless}:\nMakes all units in your army look like the most powerful unit affiliated to your hero type to enemies trying to view your hero. Numbers in each group appear as zero.\n\n{red|Curse}:\n-5% Power,\n-5% Knowledge,\n-100 maximum movement points.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"cost": 10
 			}
 		}

@@ -32,7 +32,7 @@
 							"resistMagic" : {
 								"type": "SPELL_DAMAGE_REDUCTION",
 								"subtype": "spellSchool.any",
-								"val": 5,
+								"val": 10,
 								"duration": "N_TURNS",
 								"turns": 1
 							},
@@ -47,16 +47,16 @@
 				}
 			},
 			"none": {
-				"description": "{Base Spellguard}\r\n\r\nIncreases spell damage reduction by 5% and grants 1% chance to reflect an opponent's spell.\r\n\r\nThe effect is cumulative and lasts for 1 turn."
+				"description": "{Spellguard}\n\nSchool: Any.\nProficiency: None.\n\n{green|Effects}:\n+10% Spell damage reduction,\n+1% chance to reflect an opponent's spell,\ncumulative effects.\n\n{#38e8ff|Duration}:\n1 turn."
 			},
 			"basic": {
-				"description": "{Basic Spellguard}\r\n\r\nIncreases spell damage reduction by 10% and grants 2% chance to reflect an opponent's spell.\r\n\r\nThe effect is cumulative and lasts for 2 turns.",
+				"description": "{Spellguard}\n\nSchool: Any.\nProficiency: Basic.\n\n{green|Effects}:\n+15% Spell damage reduction,\n+2% chance to reflect an opponent's spell,\ncumulative effects.\n\n{#38e8ff|Duration}:\n2 turns.",
 				"cost": 15,
 				"battleEffects": {
 					"effect1": {
 						"bonus": {
 							"resistMagic" : {
-								"val": 10,
+								"val": 15,
 								"turns": 2
 							},
 							"reflect" : {
@@ -68,13 +68,14 @@
 				}
 			},
 			"advanced": {
-				"description": "{Advanced Spellguard}\r\n\r\nIncreases spell damage reduction by 15% and grants 3% chance to reflect an opponent's spell.\r\n\r\nThe effects are cumulative and lasts for 5 turns.",
+				"description": "{Spellguard}\n\nSchool: Any.\nProficiency: Advanced.\n\n{green|Effects}:\n+20% Spell damage reduction,\n+3% chance to reflect an opponent's spell,\n4 radius.\ncumulative effects.\n\n{#38e8ff|Duration}:\n5 turns.",
 				"cost": 10,
+				"range": "4",
 				"battleEffects": {
 					"effect1": {
 						"bonus": {
 							"resistMagic" : {
-								"val": 15,
+								"val": 20,
 								"turns": 5
 							},
 							"reflect" : {
@@ -86,14 +87,14 @@
 				}
 			},
 			"expert": {
-				"description": "{Expert Spellguard}\r\n\r\nIncreases spell damage reduction by 20% and grants 4% chance to reflect an opponent's spell.\r\n\r\nThe effects are cumulative.",
+				"description": "{Spellguard}\n\nSchool: Any.\nProficiency: Expert.\n\n{green|Effects}:\n+33% Spell damage reduction,\n+4% chance to reflect an opponent's spell,\ncumulative effects.\n\n{#38e8ff|Duration}:\n10 turns.",
 				"cost": 10,
 				"range": "X",
 				"battleEffects": {
 					"effect1": {
 						"bonus": {
 							"resistMagic" : {
-								"val": 15,
+								"val": 33,
 								"turns": 10
 							},
 							"reflect" : {

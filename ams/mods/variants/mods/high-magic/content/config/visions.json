@@ -15,35 +15,35 @@
 							"valueType": "ADDITIVE_VALUE",
 							"duration" : "ONE_WEEK"
 						},
+						"costSkillPower": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.spellpower",
+							"val": -10,
+							"valueType": "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"costSkillKnowledge": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.knowledge",
+							"val": -10,
+							"valueType": "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
 						"movementPenalty": {
 							"type" : "MOVEMENT",
 							"subtype" : "heroMovementLand",
 							"val" : -100,
 							"valueType" : "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
-						},
-						"skillCostKnowledge": {
-							"type": "PRIMARY_SKILL",
-							"subtype" : "primarySkill.knowledge",
-							"val": -1,
-							"valueType": "ADDITIVE_VALUE",
-							"duration": "ONE_WEEK"
-						},
-						"skillCostPower": {
-							"type": "PRIMARY_SKILL",
-							"subtype" : "primarySkill.spellpower",
-							"val": -1,
-							"valueType": "ADDITIVE_VALUE",
-							"duration": "ONE_WEEK"
 						}
 					}
 				}
 			},
 			"none": {
-				"description": "{Visions}\r\n\r\nProficiency: None.\n\nGives you a basic idea of the strength of an opposing army, hero, or garrison.\n\nDrains -1 Knowledge, -1 Power and -100 max movement points daily.\n\nThe effects last until next week."
+				"description": "{Visions}\n\nSchool: Any\nProficiency: None.\n\n{green|Bless}:\nGives you a basic idea of the strength of an opposing army, hero, or garrison.\n\n{red|Curse}:\n-10% Power,\n-10% Knowledge,\n-100 maximum movement points,\n-5% experience gain.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week."
 			},
 			"basic": {
-				"description" : "{Visions}\n\nProficiency: Basic.\n\nGives you a basic idea of the strength of an opposing hero or garrison. In the case of nearby wandering monsters, gives you exact numbers of troops and tells you if they would be willing to join your hero.\n\nAdditionally, a hero grants +1 to the sight radius.\n\nDrains -1 Knowledge, -1 Power and -100 max movement points daily.\n\nThe effects last until next week.",
+				"description" : "{Visions}\n\nSchool: Any\nProficiency: Basic.\n\n{green|Bless}:\nGives you a basic idea of the strength of an opposing hero or garrison. In the case of nearby wandering monsters, gives you exact numbers of troops and tells you if they would be willing to join your hero.\n\n{red|Curse}:\n-10% Power,\n-10% Knowledge,\n-100 maximum movement points,\n-5% experience gain.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"cost": 15,
 				"adventureEffect" : {
 					"bonuses" : {
@@ -54,7 +54,7 @@
 				}
 			},
 			"advanced": {
-				"description" : "{Visions}\n\nProficiency: Advanced.\n\nGives you a basic idea of the strength of an opposing garrison. In the case of nearby wandering monsters, gives you exact numbers of troops and tells you if they would be willing to join your hero. Allows you to view a nearby enemy hero's primary skill statistics, creature type and quantity, as if the hero was part of your kingdom.\n\nAdditionally, a hero grants +2 to the sight radius.\n\nDrains -1 Knowledge, -1 Power and -100 max movement points daily.\n\nThe effects last until next week.",
+				"description" : "{Visions}\n\nSchool: Any\nProficiency: Advanced.\n\n{green|Bless}:\nGives you a basic idea of the strength of an opposing garrison. In the case of nearby wandering monsters, gives you exact numbers of troops and tells you if they would be willing to join your hero. Allows you to view a nearby enemy hero's primary skill statistics, creature type and quantity, as if the hero was part of your kingdom.\n\n{red|Curse}:\n-10% Power,\n-10% Knowledge,\n-100 maximum movement points,\n-5% experience gain.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"cost": 10,
 				"adventureEffect": {
 					"bonuses": {
@@ -68,7 +68,7 @@
 				}
 			},
 			"expert": {
-				"description" : "{Visions}\n\nProficiency: Expert.\n\nGives you exact numbers of wandering monsters and tells you if they would be willing to join your hero. Allows you to view a nearby enemy hero's primary skill statistics, creature type and quantity, as if the hero was part of your kingdom, as well as a nearby town's statistics, garrison creatures and quantity.\n\nAdditionally, a hero grants +3 to the sight radius.\n\nDrains -1 Knowledge, -1 Power and -100 max movement points daily.\n\nThe effects last until next week.",
+				"description" : "{Visions}\n\nSchool: Any\nProficiency: Expert.\n\n{green|Bless}:\nGives you exact numbers of wandering monsters and tells you if they would be willing to join your hero. Allows you to view a nearby enemy hero's primary skill statistics, creature type and quantity, as if the hero was part of your kingdom, as well as a nearby town's statistics, garrison creatures and quantity.\n\n{red|Curse}:\n-10% Power,\n-10% Knowledge,\n-100 maximum movement points,\n-5% experience gain.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"cost": 10,
 				"adventureEffect": {
 					"bonuses": {

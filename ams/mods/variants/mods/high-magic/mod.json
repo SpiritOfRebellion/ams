@@ -26,10 +26,14 @@
 		"ams.original.demonicPower",
 		"ams.original.divineSpirit",
 		"ams.original.fleetFoot",
-		"ams.original.heraldOfDeath"
+		"ams.original.heraldOfDeath",
+		"ams.original.holdGround",
+		"ams.original.magicCushion",
+		"ams.original.powerOfHaste"
+
 	],
 	"spells": [
-		"config/accuracy",
+		"config/artemisPloy",
 		"config/arcaneProtection",
 		"config/benediction",
 		"config/channelPower",
@@ -42,7 +46,10 @@
 		"config/demonicPower",
 		"config/divineSpirit",
 		"config/fleetFoot",
-		"config/heraldOfDeath"
+		"config/heraldOfDeath",
+		"config/holdGround",
+		"config/magicCushion",
+		"config/timeEcho"
 	],
 	"settings" : {
 	}

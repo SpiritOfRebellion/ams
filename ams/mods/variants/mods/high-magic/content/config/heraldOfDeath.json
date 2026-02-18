@@ -23,17 +23,18 @@
 							"addInfo" : 0,
 							"duration" : "ONE_WEEK"
 						},
-						"manaDecay": {
-							"type": "COMBAT_MANA_BONUS",
-							"val": -20,
-							"valueType": "ADDITIVE_VALUE",
+						"costSkillPower": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.spellpower",
+							"val": -10,
+							"valueType": "PERCENT_TO_ALL",
 							"duration": "ONE_WEEK"
 						},
-						"skillCostKnowledge": {
+						"costSkillKnowledge": {
 							"type": "PRIMARY_SKILL",
 							"subtype" : "primarySkill.knowledge",
-							"val": -1,
-							"valueType": "ADDITIVE_VALUE",
+							"val": -10,
+							"valueType": "PERCENT_TO_ALL",
 							"duration": "ONE_WEEK"
 						},
 						"movementPenalty": {
@@ -42,6 +43,18 @@
 							"val" : -100,
 							"valueType" : "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
+						},
+						"costExperience":{
+							"type" : "HERO_EXPERIENCE_GAIN_PERCENT",
+							"val" : -5,
+							"valueType" : "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"costResourceGold": {
+							"type": "GENERATE_RESOURCE",
+							"subtype": "resource.gold",
+							"val": -200,
+							"valueType": "ADDITIVE_VALUE"
 						},
 						"costResourceMercury": {
 							"type": "GENERATE_RESOURCE",
@@ -53,49 +66,34 @@
 				}
 			},
 			"none": {
-				"description": "{Herald Of Death}\n\nProficiency: None.\n\nA hero casts Death Ripple spell at the begining of each battle.\n\nIt drains 20 mana per battle, -1 Knowledge, -100 maximum movement points and -1 Mercury. The effects last until next week."
+				"description": "{Herald Of Death}\n\nSchool: Earth\nProficiency: None.\n\n{green|Bless}:\nDeath Ripple spell at the beginning of every battle.\n\n{red|Curse}:\n-10% Power,\n-10% Knowledge,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-1 Mercury.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week."
 			},
 			"basic": {
-				"description": "{Herald Of Death}\n\nProficiency: Basic.\n\nA hero casts Death Ripple spell at the begining of each battle.\n\nIt drains 10 mana per battle, -1 Knowledge, -100 maximum movement points and -1 Mercury daily. The effects last until next week.",
+				"description": "{Herald Of Death}\n\nSchool: Earth\nProficiency: Basic.\n\n{green|Bless}:\nDeath Ripple spell at the beginning of every battle.\n\n{red|Curse}:\n-10% Power,\n-10% Knowledge,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-1 Mercury.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
 						"castRipple" : {
 							"addInfo" : 1
-						},
-						"manaDecay": {
-							"val": -10
 						}
 					}
 				}
 			},
 			"advanced": {
-				"description": "{Herald Of Death}\n\nProficiency: Advanced.\n\nA hero casts Death Ripple spell at the begining of each battle.\n\nIt drains 10 mana per battle, -2 Knowledge, -100 maximum movement points and -1 Mercury daily. The effects last until next week.",
+				"description": "{Herald Of Death}\n\nSchool: Earth\nProficiency: Advanced.\n\n{green|Bless}:\nDeath Ripple spell at the beginning of every battle.\n\n{red|Curse}:\n-10% Power,\n-10% Knowledge,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-1 Mercury.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
 						"castRipple" : {
 							"addInfo" : 2
-						},
-						"manaDecay": {
-							"val": -10
-						},
-						"skillCostKnowledge": {
-							"val": -2
 						}
 					}
 				}
 			},
 			"expert": {
-				"description": "{Herald Of Death}\n\nProficiency: Expert.\n\nA hero casts Death Ripple spell at the begining of each battle.\n\nIt drains 10 mana per battle, -3 Knowledge, -100 maximum movement points and -1 Mercury daily. The effects last until next week.",
+				"description": "{Herald Of Death}\n\nSchool: Earth\nProficiency: Expert.\n\n{green|Bless}:\nDeath Ripple spell at the beginning of every battle.\n\n{red|Curse}:\n-10% Power,\n-10% Knowledge,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-1 Mercury.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
 						"castRipple" : {
 							"addInfo" : 3
-						},
-						"manaDecay": {
-							"val": -10
-						},
-						"skillCostKnowledge": {
-							"val": -3
 						}
 					}
 				}

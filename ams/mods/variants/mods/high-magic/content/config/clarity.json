@@ -25,9 +25,37 @@
 							"addInfo" : 1,
 							"duration" : "ONE_WEEK"
 						},
-						"manaDecay": {
-							"type": "COMBAT_MANA_BONUS",
-							"val": -20,
+						"skillCostKnowledge": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.knowledge",
+							"val": -10,
+							"valueType": "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"costExperience":{
+							"type" : "HERO_EXPERIENCE_GAIN_PERCENT",
+							"val" : -5,
+							"valueType" : "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"movementPenalty": {
+							"type" : "MOVEMENT",
+							"subtype" : "heroMovementLand",
+							"val" : -100,
+							"valueType" : "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"costResourceGold": {
+							"type": "GENERATE_RESOURCE",
+							"subtype": "resource.gold",
+							"val": -200,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"costResourceGems": {
+							"type": "GENERATE_RESOURCE",
+							"subtype": "resource.gems",
+							"val": -1,
 							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						}
@@ -35,43 +63,34 @@
 				}
 			},
 			"none": {
-				"description": "{Base Clarity}\r\n\r\nA hero casts mass Mindshield (basic) spell at the begining of each battle.\r\n\r\nDrains 20 mana per battle and lasts until next week."
+				"description": "{Clarity}\n\nSchool: Air\nProficiency: None.\n\n{green|Bless}:\nMass Mindshield spell at the begining of each battle.\n\n{red|Curse}:\n-10% Knowledge,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-1 Gems.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week."
 			},
 			"basic": {
-				"description": "{Basic Clarity}\r\n\r\nA hero casts mass Mindshield (basic) at the begining of each battle.\r\n\r\nCosts 10 mana per battle and lasts until next week.",
+				"description": "{Clarity}\n\nSchool: Air\nProficiency: Basic.\n\n{green|Bless}:\nMass Mindshield spell at the begining of each battle.\n\n{red|Curse}:\n-10% Knowledge,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-1 Gems.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
 						"immunityMind": {
 							"addInfo": 1
-						},
-						"manaDecay": {
-							"val": -10
 						}
 					}
 				}
 			},
 			"advanced": {
-				"description": "{Advanced Clarity}\r\n\r\nA hero casts mass Mindshield (advanced) spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle and lasts until next week.",
+				"description": "{Clarity}\n\nSchool: Air\nProficiency: Advanced.\n\n{green|Bless}:\nMass Mindshield spell at the begining of each battle.\n\n{red|Curse}:\n-10% Knowledge,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-1 Gems.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
 						"immunityMind": {
 							"addInfo": 2
-						},
-						"manaDecay": {
-							"val": -10
 						}
 					}
 				}
 			},
 			"expert": {
-				"description": "{Expert Clarity}\r\n\r\nA hero casts expert Minshield spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle and lasts until next week.",
+				"description": "{Clarity}\n\nSchool: Air\nProficiency: Expert.\n\n{green|Bless}:\nMass Mindshield spell at the begining of each battle.\n\n{red|Curse}:\n-10% Knowledge,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-1 Gems.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
 						"immunityMind": {
 							"addInfo": 3
-						},
-						"manaDecay": {
-							"val": -10
 						}
 					}
 				}

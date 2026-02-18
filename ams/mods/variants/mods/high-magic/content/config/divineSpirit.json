@@ -1,6 +1,12 @@
 {
 	"ams.original.divinespirit:divineSpirit": {
 		"level": 3,
+		"school#override" : {
+			"air" : false,
+			"earth" : true,
+			"fire" : false,
+			"water" : true
+		},
 		"flags#override": {
 			"indifferent": true
 		},
@@ -38,10 +44,24 @@
 							"type" : "NONEVIL_ALIGNMENT_MIX",
 							"duration" : "ONE_WEEK"
 						},
-						"manaDecay": {
-							"type": "COMBAT_MANA_BONUS",
-							"val": -20,
-							"valueType": "ADDITIVE_VALUE",
+						"costSkillPower": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.spellpower",
+							"val": -10,
+							"valueType": "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"costSkillKnowledge": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.knowledge",
+							"val": -10,
+							"valueType": "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"costExperience":{
+							"type" : "HERO_EXPERIENCE_GAIN_PERCENT",
+							"val" : -5,
+							"valueType" : "PERCENT_TO_ALL",
 							"duration": "ONE_WEEK"
 						},
 						"movementPenalty": {
@@ -51,14 +71,21 @@
 							"valueType" : "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						},
+						"costResourceGold": {
+							"type": "GENERATE_RESOURCE",
+							"subtype": "resource.gold",
+							"val": -200,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						}
 					}
 				}
 			},
 			"none": {
-				"description": "{Divine Spirit}\n\nProficiency: None.\n\nA hero casts mass Mirth and Sorrow spells at the begining of each battle. Allows mixing of creaturs of neutral and good factions without penalty to morale.\n\nDrains 20 mana per battle and reduces the max movement points by -100.\n\nThe effects last until next week."
+				"description": "{Divine Spirit}\n\nSchool: Earth, Water\nProficiency: None.\n\n{green|Bless}:\nMass Mirth and Sorrow spells at the beginning of each battle;\nMixing creaturs of neutral and good factions without penalty to morale.\n\n{red|Curse}:\n-10% Power,\n-10% Knowledge,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week."
 			},
 			"basic": {
-				"description": "{Divine Spirit}\n\nProficiency: Basic.\n\nA hero casts mass Mirth and Sorrow spells at the begining of each battle.Allows mixing of creaturs of neutral and good factions without penalty to morale.\n\nDrains 10 mana per battle and reduces the max movement points by -100.\n\nThe effects last until next week.",
+				"description": "{Divine Spirit}\n\nSchool: Earth, Water\nProficiency: Basic.\n\n{green|Bless}:\nMass Mirth and Sorrow spells at the beginning of each battle;\nMixing creaturs of neutral and good factions without penalty to morale.\n\n{red|Curse}:\n-10% Power,\n-10% Knowledge,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
 						"spellMirth" : {
@@ -68,15 +95,12 @@
 						"spellSorrow" : {
 							"val" : 3,
 							"addInfo" : 1
-						},
-						"manaDecay": {
-							"val": -10
 						}
 					}
 				}
 			},
 			"advanced": {
-				"description": "{Divine Spirit}\n\nProficiency: Advanced.\n\nA hero casts mass Mirth and Sorrow spells at the begining of each battle. Allows mixing of creaturs of neutral and good factions without penalty to morale.\n\nDrains 10 mana per battle and reduces the max movement points by -100.\n\nThe effects last until next week.",
+				"description": "{Divine Spirit}\n\nSchool: Earth, Water\nProficiency: Advanced.\n\n{green|Bless}:\nMass Mirth and Sorrow spells at the beginning of each battle;\nMixing creaturs of neutral and good factions without penalty to morale.\n\n{red|Curse}:\n-10% Power,\n-10% Knowledge,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
 						"spellMirth" : {
@@ -86,15 +110,12 @@
 						"spellSorrow" : {
 							"val" : 5,
 							"addInfo" : 2
-						},
-						"manaDecay": {
-							"val": -10
 						}
 					}
 				}
 			},
 			"expert": {
-				"description": "{Divine Spirit}\n\nProficiency: Expert.\n\nA hero casts mass Mirth and Sorrow spells at the begining of each battle. Allows mixing of creaturs of neutral and good factions without penalty to morale.\n\nDrains 10 mana per battle and reduces the max movement points by -100.\n\nThe effects last until next week.",
+				"description": "{Divine Spirit}\n\nSchool: Earth, Water\nProficiency: Expert.\n\n{green|Bless}:\nMass Mirth and Sorrow spells at the beginning of each battle;\nMixing creaturs of neutral and good factions without penalty to morale.\n\n{red|Curse}:\n-10% Power,\n-10% Knowledge,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
 						"spellMirth" : {
@@ -104,9 +125,6 @@
 						"spellSorrow" : {
 							"val" : 10,
 							"addInfo" : 3
-						},
-						"manaDecay": {
-							"val": -10
 						}
 					}
 				}

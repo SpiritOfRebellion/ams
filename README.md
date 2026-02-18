@@ -1,7 +1,7 @@
 <!-- # Table of Contents -->
 
 - [Adventure Map Spells Overview](#adventure-map-spells-overview)
-- [High Magic Mod](#sor-rework)
+- [High Magic Mod](#high-magic-mod)
 - [Known Issues](#known-issues)
 - [TODOs](#todos)
 - [Changelog](#changelog)
@@ -51,7 +51,13 @@
 
 # High Magic Mod Overview
 
-The mod changes durations, behavior, availability and costs of the spells. The changes listed below indicate spells that are mostly done.
+The mod changes durations, behavior, availability and costs of the spells:
+
+- [ ] Most of the spells now work as opening battle spells, so their effects are clear to understand, and can also be negated or dispelled by an opponent.
+- [ ] Spells duration incrased to - new week.
+- [ ] Bless and curse system. No spells without consequences.
+- [ ] The spells cost resource (ingredients) - experimental feature.
+- [ ] The spells are quite rare to get.
 
 ## Changes to the original adventure spells
 
@@ -76,6 +82,7 @@ The mod changes durations, behavior, availability and costs of the spells. The c
 - **Arcane Protection**: casts mass 'Spellguard' spell at the beginning of a battle. Drains mana per battle -20/-10/-10/-10. Lasts until next week.
 - **Griffin Eye**: disabled, as the Vision spell now has the same buff.
 - **Empathy**: disabled, as the Divine Spirit now has the same buff.
+- **Negotiations**: disabled, not interesting enough to occupy a slot. 
 
 ## Modifications to the core spells
 - **Visions**: Additionally grants +0/1/2/3 to the sight radius. The effect lasts until next week. Drains -1 Power, -1 Knowledge, and -100 movement.
@@ -90,7 +97,6 @@ As a consequence of the rework, some new spells were designed to simulate Advent
 
 ## NOTES
 
-- Most the spells now work as opening battle spells, so their effects are visible and can also be negated or dispelled.
 - Considered **Cancelation spell**, but ultimately no-cancelation showed up as an interesting consequence.
 - Artifacts have the advantage over the adventure spells that they are mostly not burdened with consequences.
 - Initially considered exactly 7 days duration for the spells, but as long as there is no comfortable option to see are spells currently in use, their duration lasts until new week. This means that entering a new week serves as a signal to renew the spells if necessary. The duration is determined by the timing of when the spells are cast.
@@ -98,7 +104,7 @@ As a consequence of the rework, some new spells were designed to simulate Advent
 
 # Known Issues
 
-- Lack of proper indication in the unit window about true effects of a spell. This also applies if a spell has a cumulating effect. Currently only 'base' stats are displayed. As far as I know, the issue is known to developers and not easy to change.
+- Lack of proper indication in the unit window about true effects of a spell. This also applies if a spell has a cumulating effect. Currently only 'base' stats are displayed, despite the spell itself works correctly. As far as I know, the issue is known to developers and not easy to change.
 - There is no way to indicate that adventure spells' duration ended. Partially solved with the durations set to: until next week. So a new week works as a reminder that spells must be renewed.
 - A player can cast a spell which drains resources, even if there is nothing to drain. In most cases, values can't drop below zero. Partially solved with variety of costs.
 - Resources value can drop below zero, but picking any other treasure resets it to 0 again. Kinda strange, but seems harmless.
@@ -106,21 +112,28 @@ As a consequence of the rework, some new spells were designed to simulate Advent
 - Spells casted at the begining of a battle has always a mass effect despite their level.
 - Some spells ignores hero's power when it comes to duration. Partially solved by adjusting fixed durations.
 - Casts per day bug: [#6659](https://github.com/vcmi/vcmi/issues/6659) (solved in upcomming 1.7.2 update).
-- Original 'Dead Luck' effect doesn't work as intended for unknown reasons. Disabled as default.
+- Original 'Dead Luck' effect doesn't work as intended for unknown reasons, increasing both ally and opponent's luck instead of setting the minimum luck in a battle. Disabled as default.
 
 ---
 
 ## TODOs
 
-1. Compatibility mod, as current design have support only for the vanilla factions.
-2. Restrictions to the spells - eg. 'Call the Legion' prohibited to a Knights, 'Benediction' prohibited to a Death Knight. Also there should be restrictions to the creatures.
+1. Compatibility extension mod, as current design have support only for the vanilla factions.
+2. Consider restrictions to the spells - eg. 'Call the Legion' prohibited to a Knights, 'Benediction' prohibited to a Death Knight. Also there should be restrictions to the creatures.
 3. Original sounds for additional battle spells and animations, currently they reuse existing ones.
+4. A map building were the high magic can be bought.
+5. Check translations correctness for your language.
+6. **HOT!** Adapt the spells to new magic schools eg. Light and Dark, create one if necessary
+7. **HOT!** Original icons instead of recycled h5 ones, which repeats in other mods.
+8. **HOT!** Consider new secondary skill 'High Magic' which only role is to learn the rare spells.
+9. Create a new resource dedicated for High Magic.
+10. If High Magic Mod will capture attention, consider replacement original spells.
 
 # Changelog
 
 ## Version 2.0
 
-### SoR's rework
+### New High Magic Mod
 
 - [ ] Duration of the spells changed to ONE_WEEK, including Disguise and Visions 
 - [ ] Changed behavior and effects of the spells, while staying close to their original bonuses.
@@ -154,8 +167,8 @@ As a consequence of the rework, some new spells were designed to simulate Advent
 
 ### Tests
 
-- [] New content.
-- [] Original content.
+- [ ] New content.
+- [ ] Original content.
 
 
 ### Translations

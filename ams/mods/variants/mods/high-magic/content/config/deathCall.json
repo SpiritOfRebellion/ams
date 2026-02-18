@@ -1,6 +1,6 @@
 {
 	"ams.original.deathcall:deathCall": {
-		"level": 4,
+		"level": 3,
 		"flags#override": {
 			"indifferent": true
 		},
@@ -10,7 +10,7 @@
 		},
 		"levels#override": {
 			"base": {
-				"cost" : 40,
+				"cost" : 30,
 				"power" : 1,
 				"range" : "0",
 				"adventureEffect" : {
@@ -19,95 +19,130 @@
 					"bonuses" : {
 						"bonusNecromancy" : {
 							"type": "UNDEAD_RAISE_PERCENTAGE",
-							"val": 5,
-							"valueType": "ADDITIVE_VALUE",
-							"duration": "ONE_WEEK",
-							"propagator": "HERO"
-						},
-						"skillCostPower": {
-							"type": "PRIMARY_SKILL",
-							"subtype" : "primarySkill.spellpower",
-							"val": -1,
+							"val": 20,
 							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						},
-						"skillCostKnowledge": {
+						"costSkillPower": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.spellpower",
+							"val": -10,
+							"valueType": "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"costSkillKnowledge": {
 							"type": "PRIMARY_SKILL",
 							"subtype" : "primarySkill.knowledge",
-							"val": -1,
+							"val": -10,
+							"valueType": "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"costExperience":{
+							"type" : "HERO_EXPERIENCE_GAIN_PERCENT",
+							"val" : -5,
+							"valueType" : "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"movementPenalty": {
+							"type" : "MOVEMENT",
+							"subtype" : "heroMovementLand",
+							"val" : -100,
+							"valueType" : "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"costResourceGold": {
+							"type": "GENERATE_RESOURCE",
+							"subtype": "resource.gold",
+							"val": -200,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"costResourceWood": {
+							"type": "GENERATE_RESOURCE",
+							"subtype": "resource.wood",
+							"val": -10,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"costResourceOre": {
+							"type": "GENERATE_RESOURCE",
+							"subtype": "resource.ore",
+							"val": -10,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"costResourceSulfur": {
+							"type": "GENERATE_RESOURCE",
+							"subtype": "resource.mercury",
+							"val": -5,
 							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						},
 						"costResourceMercury": {
 							"type": "GENERATE_RESOURCE",
-							"subtype": "resource.mercury",
-							"val": 0,
-							"valueType": "ADDITIVE_VALUE"
-						},
-						"costResourceSulfur": {
-							"type": "GENERATE_RESOURCE",
 							"subtype": "resource.sulfur",
-							"val": 0,
-							"valueType": "ADDITIVE_VALUE"
+							"val": -5,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
 						}
 					}
 				}
 			},
 			"none": {
-				"description": "{Base Death Call}\r\n\r\nGrants +5% bonus to the Necromancy skill.\r\n\r\nThe spell drains -1 Knowledge and -1 Power.\r\n\r\nThe effects last until the next week."
+				"description": "{Death Call}\n\nSchool: Earth\nProficiency: None.\n\n{green|Bless}:\n+20% to Necromancy skill.\n\n{red|Curse}:\n-10% Power,\n-10% Knowledge,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-10 Wood,\n-10 Ore,\n-5 Mercury,\n-5 Sulfur.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week."
 			},
 			"basic": {
-				"description": "{Basic Death Call}\r\n\r\nGrants +10% bonus to the Necromancy skill.\r\n\r\nThe spell drains -2 Knowledge and -1 Power.\r\n\r\nThe effects last until the next week.",
+				"description": "{Death Call}\n\nSchool: Earth\nProficiency: Basic.\n\n{green|Bless}:\n+20% to Necromancy skill.\n\n{red|Curse}:\n-10% Power,\n-10% Knowledge,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-7 Wood,\n-7 Ore,\n-4 Mercury,\n-4 Sulfur.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"bonusNecromancy" : {
-							"val": 10
+						"costResourceWood": {
+							"val": -7
 						},
-						"skillCostPower": {
-							"val": -1
+						"costResourceOre": {
+							"val": -7
 						},
-						"skillCostKnowledge": {
-							"val": -2
+						"costResourceSulfur": {
+							"val": -4
+						},
+						"costResourceMercury": {
+							"val": -4
 						}
 					}
 				}
 			},
 			"advanced": {
-				"description": "{Advanced Death Call}\r\n\r\nGrants +15% bonus to the Necromancy skill.\r\n\r\nThe spell drains -2 Knowledge, -2 Power and -1 Mercury daily.\r\n\r\nThe effects last until the next week.",
+				"description": "{Death Call}\n\nSchool: Earth\nProficiency: Basic.\n\n{green|Bless}:\n+20% to Necromancy skill.\n\n{red|Curse}:\n-10% Power,\n-10% Knowledge,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-5 Wood,\n-5 Ore,\n-2 Mercury,\n-2 Sulfur.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"bonusNecromancy" : {
-							"val": 15
+						"costResourceWood": {
+							"val": -5
 						},
-						"skillCostPower": {
-							"val": -2
+						"costResourceOre": {
+							"val": -5
 						},
-						"skillCostKnowledge": {
+						"costResourceSulfur": {
 							"val": -2
 						},
 						"costResourceMercury": {
-							"val": -1
+							"val": -2
 						}
 					}
 				}
 			},
 			"expert": {
-				"description": "{Expert Death Call}\r\n\r\nGrants +20% bonus to the Necromancy skill.\r\n\r\nThe spell drains -2 Knowledge, -2 Power, -1 Mercury and -1 Sulfur daily.\r\n\r\nThe effects last until the next week.",
+				"description": "{Death Call}\n\nSchool: Earth\nProficiency: Expert.\n\n{green|Bless}:\n+20% to Necromancy skill.\n\n{red|Curse}:\n-10% Power,\n-10% Knowledge,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-2 Wood,\n-2 Ore,\n-1 Mercury,\n-1 Sulfur.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"bonusNecromancy" : {
-							"val": 20
-						},
-						"skillCostPower": {
+						"costResourceWood": {
 							"val": -2
 						},
-						"skillCostKnowledge": {
+						"costResourceOre": {
 							"val": -2
-						},
-						"costResourceMercury": {
-							"val": -1
 						},
 						"costResourceSulfur": {
+							"val": -1
+						},
+						"costResourceMercury": {
 							"val": -1
 						}
 					}

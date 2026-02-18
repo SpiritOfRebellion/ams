@@ -32,11 +32,9 @@
 		},
 		"targetType" : "NO_TARGET",
 		"levels" : {
-			"none" : {
-				"description" : "{Negotiations}\r\n\r\nReduces the cost of surrendering by -10% until the end of the day.",
+			"base" : {
 				"cost" : 10,
 				"power" : 10,
-				//				"aiValue" : 6,
 				"range" : "X",
 				"targetModifier" : {
 					"smart" : false
@@ -46,73 +44,39 @@
 					"type" : "generic",
 					"castsPerDay" : 1,
 					"bonuses" : {
-						"attacks" : {
+						"surrDiscount" : {
 							"type" : "SURRENDER_DISCOUNT",
 							"val" : 10,
 							"duration" : "ONE_DAY"
 						}
 					}
 				}
+			},
+			"none": {
+				"description" : "{Negotiations}\n\nReduces the cost of surrendering by -10% until the end of the day."
 			},
 			"basic" : {
-				"description" : "{Basic Negotiations}\r\n\r\nReduces the cost of surrendering by -10% until the end of the day.",
-				"cost" : 8,
-				"power" : 10,
-				//				"aiValue" : 8,
-				"range" : "X",
-				"targetModifier" : {
-					"smart" : false
-				},
-				"adventureEffect" : {
-					"type" : "generic",
-					"castsPerDay" : 1,
-					"bonuses" : {
-						"attacks" : {
-							"type" : "SURRENDER_DISCOUNT",
-							"val" : 10,
-							"duration" : "ONE_DAY"
-						}
-					}
-				}
+				"description" : "{Basic Negotiations}\n\nReduces the cost of surrendering by -10% until the end of the day.",
+				"cost" : 8
 			},
 			"advanced" : {
-				"description" : "{Advanced Negotiations}\r\n\r\nReduces the cost of surrendering by -20% until the end of the day.",
+				"description" : "{Advanced Negotiations}\n\nReduces the cost of surrendering by -20% until the end of the day.",
 				"cost" : 8,
-				"power" : 10,
-				//				"aiValue" : 8,
-				"range" : "X",
-				"targetModifier" : {
-					"smart" : false
-				},
 				"adventureEffect" : {
-					"type" : "generic",
-					"castsPerDay" : 1,
 					"bonuses" : {
-						"attacks" : {
-							"type" : "SURRENDER_DISCOUNT",
-							"val" : 20,
-							"duration" : "ONE_DAY"
+						"surrDiscount" : {
+							"val" : 20
 						}
 					}
 				}
 			},
 			"expert" : {
-				"description" : "{Expert Negotiations}\r\n\r\nReduces the cost of surrendering by -30% until the end of the day.",
+				"description" : "{Expert Negotiations}\n\nReduces the cost of surrendering by -30% until the end of the day.",
 				"cost" : 8,
-				"power" : 10,
-				//				"aiValue" : 8,
-				"range" : "X",
-				"targetModifier" : {
-					"smart" : false
-				},
 				"adventureEffect" : {
-					"type" : "generic",
-					"castsPerDay" : 1,
 					"bonuses" : {
-						"attacks" : {
-							"type" : "SURRENDER_DISCOUNT",
-							"val" : 30,
-							"duration" : "ONE_DAY"
+						"surrDiscount" : {
+							"val" : 30
 						}
 					}
 				}

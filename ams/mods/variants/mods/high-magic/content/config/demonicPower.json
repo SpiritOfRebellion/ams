@@ -1,6 +1,6 @@
 {
 	"ams.original.demonicpower:demonicPower": {
-		"level": 4,
+		"level": 3,
 		"flags#override": {
 			"indifferent": true
 		},
@@ -9,7 +9,7 @@
 			"dungeon" : 2,
 			"fortress" : 1,
 			"inferno" : 3,
-			"stronghold" : 1,
+			"stronghold" : 2
 		},
 		"levels#override": {
 			"base": {
@@ -20,32 +20,38 @@
 					"type" : "generic",
 					"castsPerDay": 1,
 					"bonuses" : {
-						"skillBoostAttack": {
+						"boostSkillAttack": {
 							"type": "PRIMARY_SKILL",
 							"subtype" : "primarySkill.attack",
-							"val": 5,
+							"val": 4,
 							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						},
-						"skillCostDefence": {
+						"costSkillDefence": {
 							"type": "PRIMARY_SKILL",
 							"subtype" : "primarySkill.defence",
-							"val": -5,
-							"valueType": "ADDITIVE_VALUE",
+							"val": -30,
+							"valueType": "PERCENT_TO_ALL",
 							"duration": "ONE_WEEK"
 						},
-						"skillCostPower": {
+						"costSkillPower": {
 							"type": "PRIMARY_SKILL",
 							"subtype" : "primarySkill.spellpower",
-							"val": -5,
-							"valueType": "ADDITIVE_VALUE",
+							"val": -30,
+							"valueType": "PERCENT_TO_ALL",
 							"duration": "ONE_WEEK"
 						},
-						"skillCostKnowledge": {
+						"costSkillKnowledge": {
 							"type": "PRIMARY_SKILL",
 							"subtype" : "primarySkill.knowledge",
-							"val": -5,
-							"valueType": "ADDITIVE_VALUE",
+							"val": -30,
+							"valueType": "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"costExperience":{
+							"type" : "HERO_EXPERIENCE_GAIN_PERCENT",
+							"val" : -5,
+							"valueType" : "PERCENT_TO_ALL",
 							"duration": "ONE_WEEK"
 						},
 						"movementPenalty": {
@@ -55,66 +61,46 @@
 							"valueType" : "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						},
+						"costResourceGold": {
+							"type": "GENERATE_RESOURCE",
+							"subtype": "resource.gold",
+							"val": -200,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						}
 					}
 				}
 			},
 			"none": {
-				"description": "{Demonic Power}\n\nProficiency: None.\n\nA hero gains +5 Attack, yet the spell drains -5 from the other primary skills. Also decreases the max movement points by -100.\n\nThe effects last until next week."
+				"description": "{Demonic Power}\n\nSchool: Fire.\nProficiency: None.\n\n{green|Bless}:\n+4 Attack.\n\n{red|Curse}:\n-30% to the all other primary skills,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week."
 			},
 			"basic": {
-				"description": "{Demonic Power}\n\nProficiency: Basic.\n\nA hero gains +5 Attack, yet the spell drains -3 from the other primary skills. Also decreases the max movement points by -100.\n\nThe effects last until next week.",
+				"description": "{Demonic Power}\n\nSchool: Fire.\nProficiency: None.\n\n{green|Bless}:\n+6 Attack.\n\n{red|Curse}:\n-30% to the all other primary skills,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"skillBoostAttack": {
-							"val": 5
-						},
-						"skillCostDefence": {
-							"val": -3
-						},
-						"skillCostPower": {
-							"val": -3
-						},
-						"skillCostKnowledge": {
-							"val": -3
-						},
+						"boostSkillAttack": {
+							"val": 6
+						}
 					}
 				}
 			},
 			"advanced": {
-				"description": "{Demonic Power}\n\nProficiency: Advanced.\n\nA hero gains +7 Attack, yet the spell drains -4 from the other primary skills. Also decreases the max movement points by -100.\n\nThe effects last until next week.",
+				"description": "{Demonic Power}\n\nSchool: Fire.\nProficiency: None.\n\n{green|Bless}:\n+8 Attack.\n\n{red|Curse}:\n-30% to the all other primary skills,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"skillBoostAttack": {
-							"val": 7
-						},
-						"skillCostDefence": {
-							"val": -4
-						},
-						"skillCostPower": {
-							"val": -4
-						},
-						"skillCostKnowledge": {
-							"val": -4
-						},
+						"boostSkillAttack": {
+							"val": 8
+						}
 					}
 				}
 			},
 			"expert": {
-				"description": "{Demonic Power}\n\nProficiency: Expert.\n\nA hero gains +10 Attack, yet the spell drains -5 from the other primary skills. Also decreases the max movement points by -100.\n\nThe effects last until next week.",
+				"description": "{Demonic Power}\n\nSchool: Fire.\nProficiency: None.\n\n{green|Bless}:\n+10 Attack.\n\n{red|Curse}:\n-30% to the all other primary skills,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"skillBoostAttack": {
+						"boostSkillAttack": {
 							"val": 10
-						},
-						"skillCostDefence": {
-							"val": -5
-						},
-						"skillCostPower": {
-							"val": -5
-						},
-						"skillCostKnowledge": {
-							"val": -5
-						},
+						}
 					}
 				}
 			}

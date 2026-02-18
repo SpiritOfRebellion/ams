@@ -23,15 +23,43 @@
 					"type" : "generic",
 					"castsPerDay": 1,
 					"bonuses" : {
-						"openingSepllguard" : {
+						"castSpellguard" : {
 							"type" : "OPENING_BATTLE_SPELL",
 							"subtype" : "spell.spellguard",
 							"addInfo" : 1,
 							"duration" : "ONE_WEEK"
 						},
-						"manaDecay": {
-							"type": "COMBAT_MANA_BONUS",
-							"val": -20,
+						"skillCostPower": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.spellpower",
+							"val": -5,
+							"valueType": "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"skillCostKnowledge": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.knowledge",
+							"val": -5,
+							"valueType": "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"costExperience":{
+							"type" : "HERO_EXPERIENCE_GAIN_PERCENT",
+							"val" : -5,
+							"valueType" : "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"movementPenalty": {
+							"type" : "MOVEMENT",
+							"subtype" : "heroMovementLand",
+							"val" : -100,
+							"valueType" : "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"costResourceGold": {
+							"type": "GENERATE_RESOURCE",
+							"subtype": "resource.gold",
+							"val": -200,
 							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						}
@@ -39,43 +67,34 @@
 				}
 			},
 			"none": {
-				"description": "{Base Arcane Protection}\r\n\r\nA hero casts mass Spellguard (base) spell at the begining of each battle.\r\n\r\nDrains 20 mana per battle cast and lasts for 7 days."
+				"description": "{Arcane Protection}\n\nSchool: Any.\nProficiency: None.\n\n{green|Bless}:\nSpellguard spell at the beginning of each battle.\n\n{red|Curse}:\n-5% to Power and Knowlege,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week."
 			},
 			"basic": {
-				"description": "{Basic Arcane Protection}\r\n\r\nA hero casts mass Spellguard (basic) spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle cast and lasts for 7 days.",
+				"description": "{Arcane Protection}\n\nSchool: Any.\nProficiency: Basic.\n\n{green|Bless}:\nSpellguard spell at the beginning of each battle.\n\n{red|Curse}:\n-5% to Power and Knowlege,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"openingSepllguard": {
+						"castSpellguard": {
 							"addInfo": 1
-						},
-						"manaDecay": {
-							"val": -10
 						}
 					}
 				}
 			},
 			"advanced": {
-				"description": "{Advanced Arcane Protection}\r\n\r\nA hero casts mass Spellguard (advanced) spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle cast and lasts for 7 days.",
+				"description": "{Arcane Protection}\n\nSchool: Any.\nProficiency: Advanced.\n\n{green|Bless}:\nSpellguard spell at the beginning of each battle.\n\n{red|Curse}:\n-5% to Power and Knowlege,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"openingSepllguard": {
+						"castSpellguard": {
 							"addInfo": 2
-						},
-						"manaDecay": {
-							"val": -10
 						}
 					}
 				}
 			},
 			"expert": {
-				"description": "{Expert Arcane Protection}\r\n\r\nA hero casts mass Spellguard (expert) spell at the begining of each battle.\r\n\r\nCosts 10 mana per battle cast and lasts for 7 days.",
+				"description": "{Arcane Protection}\n\nSchool: Any.\nProficiency: Advanced.\n\n{green|Bless}:\nSpellguard spell at the beginning of each battle.\n\n{red|Curse}:\n-5% Power and Knowlege,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"openingSepllguard": {
+						"castSpellguard": {
 							"addInfo": 3
-						},
-						"manaDecay": {
-							"val": -10
 						}
 					}
 				}

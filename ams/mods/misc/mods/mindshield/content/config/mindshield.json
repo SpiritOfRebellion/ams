@@ -24,6 +24,15 @@
 			"spell.hypnotize" : true,
 			"spell.sorrow" : true
 		},
+		"targetCondition" : {
+			"noneOf" : {
+				"bonus.NON_LIVING" : "absolute",
+				"bonus.MECHANICAL" : "absolute",
+				"bonus.SIEGE_WEAPON" : "absolute",
+				"bonus.GARGOYLE" : "absolute",
+				"bonus.UNDEAD" : "absolute"
+			}
+		},
 		"levels": {
 			"base": {
 				"power": 1,
@@ -54,10 +63,10 @@
 				}
 			},
 			"none": {
-				"description": "{Base Mindshield}\r\n\r\nThe spell grants immunity to mind-affecting spells to a selected group. Additionally dispels negative statuses of mind and sets mimimum morale to 0.\r\n\r\nEffects last for 1 turn."
+				"description": "{Mindshield}\n\nSchool: Any\nProficiency: None.\n\n{green|Effect}:\nImmunity to mind-affecting spells to selected groups,\ndispels negative statuses of mind,\nsets mimimum morale to 0.\n\n{#38e8ff|Duration}:1 turn."
 			},
 			"basic": {
-				"description": "{Basic Mindshield}\r\n\r\nThe spell grants immunity to mind-affecting spells to a selected group. Additionally dispels negative statuses of mind and sets mimimum morale to 0. Effects last for 2 turns.",
+				"description": "{Mindshield}\n\nSchool: Any\nProficiency: Basic.\n\n{green|Effect}:\nImmunity to mind-affecting spells to selected groups,\ndispels negative statuses of mind,\nsets mimimum morale to 0.\n\n{#38e8ff|Duration}:2 turns.",
 				"cost": 15,
 				"battleEffects": {
 					"effect1": {
@@ -73,8 +82,9 @@
 				}
 			},
 			"advanced": {
-				"description": "{Advanced Mindshield}\r\n\r\nThe spell grants immunity to mind-affecting spells to a selected group. Additionally dispels negative statuses of mind and sets mimimum morale to 0. Effects last for 5 turns.",
+				"description": "{Mindshield}\n\nSchool: Any\nProficiency: Advanced.\n\n{green|Effect}:\nImmunity to mind-affecting spells to selected groups,\ndispels negative statuses of mind,\n sets mimimum morale to 0,\n4 radius.\n\n{#38e8ff|Duration}:5 turns.",
 				"cost": 10,
+				"range": "4",
 				"battleEffects": {
 					"effect1": {
 						"bonus": {
@@ -89,7 +99,7 @@
 				}
 			},
 			"expert": {
-				"description": "{Expert Mindshield}\r\n\r\nThe spell grants immunity to mind-affecting spells to hero's army. Additionally dispels negative statuses of mind and sets mimimum morale to 0. Effects last for 10 turns.",
+				"description": "{Mindshield}\n\nSchool: Any\nProficiency: Expert.\n\n{green|Effect}:\nImmunity to mind-affecting spells to selected groups,\ndispels negative statuses of mind,\n sets mimimum morale to 0,\nmass effect.\n\n{#38e8ff|Duration}:\n10 turns.",
 				"cost": 10,
 				"range": "X",
 				"battleEffects": {

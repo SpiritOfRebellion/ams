@@ -32,11 +32,9 @@
 		},
 		"targetType" : "NO_TARGET",
 		"levels" : {
-			"none" : {
-				"description" : "{Magic Cushion}\r\n\r\nCreatures receive +5% magical resistance until the end of the day.",
+			"base" : {
 				"cost" : 16,
 				"power" : 10,
-				//				"aiValue" : 10,
 				"range" : "X",
 				"targetModifier" : {
 					"smart" : false
@@ -45,7 +43,7 @@
 					"type" : "generic",
 					"castsPerDay" : 1,
 					"bonuses" : {
-						"attacks" : {
+						"addResistance" : {
 							"type" : "MAGIC_RESISTANCE",
 							"val" : 5,
 							"duration" : "ONE_DAY",
@@ -53,69 +51,32 @@
 						}
 					}
 				}
+			},
+			"none" : {
+				"description" : "{Magic Cushion}\n\nProficiency: None.\n\nCreatures receive +5% magical resistance until the end of the day."
 			},
 			"basic" : {
-				"description" : "{Basic Magic Cushion}\r\n\r\nCreatures receive +5% magical resistance until the end of the day.",
-				"cost" : 12,
-				"power" : 10,
-				//				"aiValue" : 10,
-				"range" : "X",
-				"targetModifier" : {
-					"smart" : false
-				},
-				"adventureEffect" : {
-					"type" : "generic",
-					"castsPerDay" : 1,
-					"bonuses" : {
-						"attacks" : {
-							"type" : "MAGIC_RESISTANCE",
-							"val" : 5,
-							"duration" : "ONE_DAY",
-							"propagator" : "HERO"
-						}
-					}
-				}
+				"description" : "{Magic Cushion}\n\nProficiency: Basic.\n\nCreatures receive +5% magical resistance until the end of the day.",
+				"cost" : 12
 			},
 			"advanced" : {
-				"description" : "{Advanced Magic Cushion}\r\n\r\nCreatures receive +10% magical resistance until the end of the day.",
+				"description" : "{Magic Cushion}\n\nProficiency: Advanced.\n\nCreatures receive +10% magical resistance until the end of the day.",
 				"cost" : 12,
-				"power" : 10,
-				//				"aiValue" : 10,
-				"range" : "X",
-				"targetModifier" : {
-					"smart" : false
-				},
 				"adventureEffect" : {
-					"type" : "generic",
-					"castsPerDay" : 1,
 					"bonuses" : {
-						"attacks" : {
-							"type" : "MAGIC_RESISTANCE",
-							"val" : 10,
-							"duration" : "ONE_DAY",
-							"propagator" : "HERO"
+						"addResistance" : {
+							"val" : 10
 						}
 					}
 				}
 			},
 			"expert" : {
-				"description" : "{Expert Magic Cushion}\r\n\r\nCreatures receive +15% magical resistance until the end of the day.",
+				"description" : "{Magic Cushion}\n\nProficiency: Expert.\n\nCreatures receive +15% magical resistance until the end of the day.",
 				"cost" : 12,
-				"power" : 10,
-				//				"aiValue" : 10,
-				"range" : "X",
-				"targetModifier" : {
-					"smart" : false
-				},
 				"adventureEffect" : {
-					"type" : "generic",
-					"castsPerDay" : 1,
 					"bonuses" : {
-						"attacks" : {
-							"type" : "MAGIC_RESISTANCE",
-							"val" : 15,
-							"duration" : "ONE_DAY",
-							"propagator" : "HERO"
+						"addResistance" : {
+							"val" : 15
 						}
 					}
 				}

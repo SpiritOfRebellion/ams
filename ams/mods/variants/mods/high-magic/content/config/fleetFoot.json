@@ -1,6 +1,6 @@
 {
 	"ams.original.fleetfoot:fleetFoot": {
-		"level": 4,
+		"level": 3,
 		"targetCondition": {},
 		"flags#override": {
 			"indifferent": true
@@ -16,7 +16,7 @@
 		},
 		"levels#override": {
 			"base": {
-				"cost" : 40,
+				"cost" : 30,
 				"power" : 1,
 				"range" : "0",
 				"adventureEffect" : {
@@ -26,28 +26,41 @@
 						"addMovement": {
 							"type": "MOVEMENT",
 							"subtype": "heroMovementLand",
-							"val": 200,
+							"val": 500,
 							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						},
-						"skillCostAttack": {
+						"costSkillAttack": {
 							"type": "PRIMARY_SKILL",
 							"subtype" : "primarySkill.attack",
-							"val": -2,
-							"valueType": "ADDITIVE_VALUE",
+							"val": -20,
+							"valueType": "PERCENT_TO_ALL",
 							"duration": "ONE_WEEK"
 						},
-						"skillCostDefence": {
+						"costSkillDefence": {
 							"type": "PRIMARY_SKILL",
 							"subtype" : "primarySkill.defence",
-							"val": -2,
-							"valueType": "ADDITIVE_VALUE",
+							"val": -20,
+							"valueType": "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"costSkillPower": {
+							"type": "PRIMARY_SKILL",
+							"subtype" : "primarySkill.spellpower",
+							"val": -20,
+							"valueType": "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"costExperience":{
+							"type" : "HERO_EXPERIENCE_GAIN_PERCENT",
+							"val" : -5,
+							"valueType" : "PERCENT_TO_ALL",
 							"duration": "ONE_WEEK"
 						},
 						"costResourceGold": {
 							"type": "GENERATE_RESOURCE",
 							"subtype": "resource.gold",
-							"val": -500,
+							"val": -200,
 							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						},
@@ -62,58 +75,34 @@
 				}
 			},
 			"none": {
-				"description": "{Fleet Foot}\n\nProficiency: None.\n\nA hero grants +200 to maximum movement points.\n\nDrains -2 Attack, -2 Defence and resources -1 gems and -500 gold daily.\n\nThe effects last until the next week."
+				"description": "{Fleet Foot}\n\nSchool: Air\nProficiency: None.\n\n{green|Bless}:\n+500 to maximum movement points.\n\n{red|Curse}:\n-20% to Attack, Defence and Power,\n-5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-1 Gems.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week."
 			},
 			"basic": {
-				"description": "{Fleet Foot}\n\nProficiency: Basic.\n\nA hero grants +400 to maximum movement points.\n\nDrains -3 Attack, -3 Defence, -1 gems and -500 gold daily.\n\nThe effects last until the next week.",
+				"description": "{Fleet Foot}\n\nSchool: Air\nProficiency: Basic.\n\n{green|Bless}:\n+650 to maximum movement points.\n\n{red|Curse}:\n-20% to Attack, Defence and Power,\n-5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-1 Gems.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
 						"addMovement": {
-							"val": 400
-						},
-						"skillCostAttack": {
-							"val": -3
-						},
-						"skillCostDefence": {
-							"val": -3
+							"val": 650
 						}
 					}
 				}
 			},
 			"advanced": {
-				"description": "{Fleet Foot}\n\nProficiency: Advanced.\n\nA hero grants +700 to maximum movement points.\n\nDrains -4 Attack, -4 Defence, -1 gems and -750 gold daily.\n\nThe effects last until the next week.",
+				"description": "{Fleet Foot}\n\nSchool: Air\nProficiency: Advanced.\n\n{green|Bless}:\n+800 to maximum movement points.\n\n{red|Curse}:\n-20% to Attack, Defence and Power,\n-5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-1 Gems.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
 						"addMovement": {
-							"val": 700
-						},
-						"skillCostAttack": {
-							"val": -4
-						},
-						"skillCostDefence": {
-							"val": -4
-						},
-						"costResourceGold": {
-							"val": -750
+							"val": 800
 						}
 					}
 				}
 			},
 			"expert": {
-				"description": "{Fleet Foot}\n\nProficiency: Expert.\n\nA hero grants +1000 to maximum movement points.\n\nDrains -5 Attack, -5 Defence, -1 gems and -1000 gold daily.\n\nThe effects last until the next week.",
+				"description": "{Fleet Foot}\n\nSchool: Air\nProficiency: Expert.\n\n{green|Bless}:\n+1000 to maximum movement points.\n\n{red|Curse}:\n-20% to Attack, Defence and Power,\n-5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-1 Gems.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
 						"addMovement": {
 							"val": 1000
-						},
-						"skillCostAttack": {
-							"val": -5
-						},
-						"skillCostDefence": {
-							"val": -5
-						},
-						"costResourceGold": {
-							"val": -1000
 						}
 					}
 				}

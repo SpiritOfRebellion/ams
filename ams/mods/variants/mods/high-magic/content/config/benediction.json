@@ -1,6 +1,6 @@
 {
 	"ams.original.benediction:benediction": {
-		"level": 2,
+		"level": 3,
 		"power": 0,
 		"targetCondition#override": {},
 		"flags#override": {
@@ -16,7 +16,7 @@
 		},
 		"levels#override": {
 			"base": {
-				"cost" : 20,
+				"cost" : 30,
 				"power" : 0,
 				"range" : "0",
 				"adventureEffect" : {
@@ -26,14 +26,48 @@
 						"proficiency" : {
 							"type": "MAGIC_SCHOOL_SKILL",
 							"subtype": "spellSchool.any",
-							"val": 1,
+							"val": 3,
 							"valueType": "INDEPENDENT_MIN",
 							"duration": "ONE_WEEK"
 						},
-						"skillCostPower": {
+						"costSkillPower": {
 							"type": "PRIMARY_SKILL",
 							"subtype" : "primarySkill.spellpower",
-							"val": -10,
+							"val": -100,
+							"valueType": "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"costExperience":{
+							"type" : "HERO_EXPERIENCE_GAIN_PERCENT",
+							"val" : -90,
+							"valueType" : "PERCENT_TO_ALL",
+							"duration": "ONE_WEEK"
+						},
+						"movementPenalty": {
+							"type" : "MOVEMENT",
+							"subtype" : "heroMovementLand",
+							"val" : -100,
+							"valueType" : "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"costResourceGold": {
+							"type": "GENERATE_RESOURCE",
+							"subtype": "resource.gold",
+							"val": -200,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"costResourceWood": {
+							"type": "GENERATE_RESOURCE",
+							"subtype": "resource.wood",
+							"val": -2,
+							"valueType": "ADDITIVE_VALUE",
+							"duration": "ONE_WEEK"
+						},
+						"costResourceOre": {
+							"type": "GENERATE_RESOURCE",
+							"subtype": "resource.ore",
+							"val": -2,
 							"valueType": "ADDITIVE_VALUE",
 							"duration": "ONE_WEEK"
 						}
@@ -41,40 +75,43 @@
 				}
 			},
 			"none": {
-				"description": "{Base Benediction}\r\n\r\nA hero is able to cast all spells with Basic proficiency.\r\n\r\nDrains 10 Power daily and lasts until next week."
+				"description": "{Benediction}\n\nSchool: Water\nProficiency: None.\n\n{green|Bless}:\nA hero is able to cast all spells with Expert proficiency.\n\n{red|Curse}:\n-100% Power,\n-100 maximum movement points,\n -90% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-2 Wood,\n-2 Ore.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week."
 			},
 			"basic": {
-				"description": "{Basic Benediction}\r\n\r\nA hero is able to cast all spells with Basic proficiency.\r\n\r\nDrains 2 Power daily and lasts until next week.",
+				"description": "{Benediction}\n\nSchool: Water\nProficiency: Basic.\n\n{green|Bless}:\nA hero is able to cast all spells with Expert proficiency.\n\n{red|Curse}:\n-80% Power,\n-100 maximum movement points,\n -50% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-2 Wood,\n-2 Ore.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"skillCostPower": {
-							"val": -2
+						"costSkillPower": {
+							"val": -80
+						},
+						"costExperience":{
+							"val" : -50
 						}
 					}
 				}
 			},
 			"advanced": {
-				"description": "{Advanced Benediction}\r\n\r\nA hero is able to cast all spells with Advanced proficiency.\r\n\r\nDrains 5 Power daily and lasts until next week.",
+				"description": "{Benediction}\n\nSchool: Water\nProficiency: Advanced.\n\n{green|Bless}:\nA hero is able to cast all spells with Expert proficiency.\n\n{red|Curse}:\n-50% Power,\n-100 maximum movement points,\n -25% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-2 Wood,\n-2 Ore.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"proficiency" : {
-							"val": 2
+						"costSkillPower": {
+							"val": -50
 						},
-						"skillCostPower": {
-							"val": -5
+						"costExperience":{
+							"val" : -25
 						}
 					}
 				}
 			},
 			"expert": {
-				"description": "{Expert Benediction}\r\n\r\nA hero is able to cast all spells with Advanced proficiency.\r\n\r\nDrains 8 Power daily and lasts until next week.",
+				"description": "{Benediction}\n\nSchool: Water\nProficiency: Expert.\n\n{green|Bless}:\nA hero is able to cast all spells with Expert proficiency.\n\n{red|Curse}:\n-25% Power,\n-100 maximum movement points,\n -5% experience gain.\n\n{#6d38ff|Ingredients} costs:\n-200 gold,\n-2 Wood,\n-2 Ore.\n\n{#38e8ff|Duration}:\nAll the effects remain until next week.",
 				"adventureEffect": {
 					"bonuses": {
-						"proficiency" : {
-							"val": 3
+						"costSkillPower": {
+							"val": -25
 						},
-						"skillCostPower": {
-							"val": -8
+						"costExperience":{
+							"val" : -5
 						}
 					}
 				}
